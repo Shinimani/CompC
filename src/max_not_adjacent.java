@@ -1,33 +1,70 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class max_not_adjacent
 {
-    /*Function to return max sum such that no two elements
-      are adjacent */
-    int FindMaxSum(int arr[], int n)
-    {
-        int incl = arr[0];
-        int excl = 0;
-        int excl_new;
-        int i;
-
-        for (i = 1; i < n; i++)
-        {
-            /* current max excluding i */
-            excl_new = (incl > excl) ? incl : excl;
-
-            /* current max including i */
-            incl = excl + arr[i];
-            excl = excl_new;
-        }
-
-        /* return max of incl and excl */
-        return ((incl > excl) ? incl : excl);
-    }
 
     // Driver program to test above functions
     public static void main(String[] args)
     {
-        max_not_adjacent sum = new max_not_adjacent();
-        int arr[] = new int[]{-1,7,8,7,4};
-        System.out.println(sum.FindMaxSum(arr, arr.length));
+        Scanner s = new Scanner(System.in);
+        int T = s.nextInt();
+        for (int k = 0; k < T; k++) {
+            int n = s.nextInt();
+            int[] arr = new int[n];
+            for (int j = 0; j < n; j++) {
+                arr[j] = s.nextInt();
+            }
+
+
+            int incl = arr[0];
+            int excl = 0;
+            int excl_new;
+            int i;
+            int prev = incl;
+
+            ArrayList<Integer> store = new ArrayList<Integer>();
+
+
+            for (i = 1; i < n; i++)
+            {
+                /* current max excluding i */
+                if (incl > excl)
+                {
+                    excl_new = incl;
+                    store.add(prev);
+                }
+                else
+                {
+                    excl_new = excl;
+                }
+
+                /* current max including i */
+                incl = excl + arr[i];
+                excl = excl_new;
+                prev = arr[i];
+            }
+
+            /* return max of incl and excl */
+            if (incl > excl)
+            {
+                excl_new = incl;
+                store.add(prev);
+            }
+            else
+            {
+                excl_new = excl;
+            }
+
+            String ans = "";
+            for (int j = 0; j < store.size() ; j++) {
+                ans = store.get(j) + ans;
+            }
+            System.out.println(ans);
+
+
+
+        }
+
     }
 }
