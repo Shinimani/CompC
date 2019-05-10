@@ -1,76 +1,9 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class B1_Cat_Party_Easy_Edition_forces {
-//    static boolean check(int[] arr)
-//    {
-//        boolean flag = false;
-//        int count = 0;
-//        boolean first = false;
-//        for(int i = 0; i<arr.length;i++)
-//        {
-//            if (arr[i] != 0)
-//            {
-//                if (first)
-//                {
-//                    if (arr[i] != count) {
-//                        flag = true;
-//                        break;
-//                    }
-//
-//                }else
-//                {count = arr[i];
-//                first = true;}
-//            }
-//
-//        }
-//        return flag;
-//    }
-/*
-    static boolean check1(int[] arr) {
-        boolean flag = false;//answer
-        int c = 0;//the repititive number
-        boolean first = false;//first non zero
-        boolean f1 = false;//first diff
-        int countt = 0;//count of total non zero
-        int count1 = 0;//count of number of ones
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != 0)
-            {
-                countt++;
-                if (!first) {
-                    c = arr[i];
-                    first = true;
-                    flag = true;
-                } else if (arr[i] == 1)
-                {
-                    count1++;
-                    if (!f1)
-                    {
-                        flag = true;
-                        f1 = true;
-                    }
-                    else if (c == 1)
-                    {
-                        flag = true;
-                    }
-                    else flag = false;
-                } else if ((arr[i] - c) == 1||(arr[i] - c) == -1)
-                {
-                    if (!f1) {
-                        flag = true;
-                        f1 = true;
-                    }
-                    else flag = false;
-                } else flag = false;
 
-
-            }
-
-        }
-       return flag;
-
-    }
-  */  static boolean alleq(int[] arr)
+    static boolean alleq(int[] arr)
     {
         boolean ans = true;
         boolean f = false;
@@ -116,7 +49,50 @@ public class B1_Cat_Party_Easy_Edition_forces {
 
     }
 
+
+    /*
+    static int hashFunction(int x)
+    {
+        return (x % 1019);
+    }
+
+     */
+
+    /*
+    static void store(int[] arr, int x)
+    {
+        int l = hashFunction(x);
+        if (arr[l] == 0)
+        {
+            arr[l] = x;
+        }
+        else
+        {
+            while (arr[l] == 0)
+            {
+                l = l + 1019;
+            }
+            arr[l] = x;
+        }
+    }
+
+
+    static int getLocation(int[] arr, int x)
+    {
+        int k = arr.length;
+        int l = x % k;
+        while (arr[l] !=0)
+        {
+            l = ((l + (k/2)) % k);
+        }
+        return l;
+    }
+
+*/
+
     public static void main(String[] args) {
+        //this was for easy version
+        /*
         Scanner s = new Scanner(System.in);
         int T = s.nextInt();
         int num = 0;
@@ -128,12 +104,39 @@ public class B1_Cat_Party_Easy_Edition_forces {
             if (check2(col)) num = k;
 
         }
-      /*  for (int element: col) {
-            System.out.println(element);
-        }*/
         System.out.println(num + 1);
-        /*int[] ar = new int[]{3,1,1,1,0,0,0,0};
-        boolean a = check2(ar);
-        System.out.println(a);*/
+
+         */
+
+
+        //This is for tough version
+        Scanner s = new Scanner(System.in);
+        int T = s.nextInt();
+        int num = 0;
+        ArrayList pos = new ArrayList();//this will store the positions of the numbers, with the index being same in both the freq and pos tables
+        int[] freq = new int[T];//this will store frequencies of the number at locations
+        for (int k = 0;k<T;k++)
+        {
+            int a = s.nextInt();
+            int l = pos.indexOf(a);
+            boolean f = false;
+            if (l == -1)
+            {
+                f = true;
+                pos.add(a);
+                l = pos.size() - 1;
+            }
+            (freq[l])++;
+            if (f && num == (k-1)) num = k;
+            else if (check2(freq)) num = k;
+        }
+        /*
+        for (int element:freq)
+        {
+            System.out.println(element + " ");
+        }
+         */
+
+        System.out.println(num + 1);
     }
 }
