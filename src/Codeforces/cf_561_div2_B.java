@@ -1,3 +1,5 @@
+package Codeforces;
+
 import java.util.Scanner;
 
 public class cf_561_div2_B {

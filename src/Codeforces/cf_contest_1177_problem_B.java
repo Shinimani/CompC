@@ -1,3 +1,5 @@
+package Codeforces;
+
 import java.util.Scanner;
 
 public class cf_contest_1177_problem_B {
