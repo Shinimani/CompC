@@ -8,8 +8,8 @@ public class sort_qs {
         InputStreamReader ir = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(ir);
 
-        int T = Integer.parseInt(br.readLine());
-        while (T-->0)
+            int T = Integer.parseInt(br.readLine());
+            while (T-->0)
         {
             int N = Integer.parseInt(br.readLine());
             String[] inp = br.readLine().split(" ");
