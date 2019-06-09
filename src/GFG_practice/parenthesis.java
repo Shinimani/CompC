@@ -1,6 +1,6 @@
 package GFG_practice;
 
-public class parent {
+public class parenthesis {
 //    https://practice.geeksforgeeks.org/problems/parenthesis-checker/0
 
     public static void main(String[] args) throws Exception {
@@ -8,7 +8,7 @@ public class parent {
         int T = f.nextInt();
         while (T-- > 0) {
             int N = f.nextInt();
-            int[] a = f.nextIntArray(N);
+            char[] a = f.nextCharArray(N);
 
 
         }
