@@ -18,10 +18,9 @@ public class kadanes {
                 if(max_num<a[i])
                     max_num=a[i];
             }
-
-
-
-
+            if (max_num<0)
+                System.out.println(max_num);
+            else System.out.println(max_overall);
         }
     }
 
