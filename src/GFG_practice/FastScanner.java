@@ -98,4 +98,12 @@ class FastScanner {
         return res;
     }
 
+    public char[] nextCharArray(int n) {
+        char[] res = new char[n];
+        for (int i = 0; i < n; i++) {
+            res[i] = nextChar();
+        }
+        return res;
+    }
+
 }
