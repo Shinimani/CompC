@@ -13,6 +13,7 @@ public class equi_point {
             for (int i = 0; i < N; i++) {
                 totsum +=a[i];
             }
+//all we ever do is go bla bla bla bla
 
             int sum=0;
             int ans = -2;
