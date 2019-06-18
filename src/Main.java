@@ -5,9 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        String T = s.next();
-        String y = s.next();
+//        String T = s.next();
+//        String y = s.next();
 //        boolean a = T>y;
+        int[][] a = new int[3][4];
+        System.out.println(a.length);
+        System.out.println(a[0].length);
 
 //        System.out.println();
 //        for (int i = 0; i < T; i++) {
