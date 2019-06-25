@@ -5,8 +5,8 @@ public class Sample {
         FastScanner f = new FastScanner();
         int T = f.nextInt();
         while (T-- > 0) {
-            int N = f.nextInt();
-            int[] a = f.nextIntArray(N);
+            int n = f.nextInt();
+            int[] a = f.nextIntArray(n);
 
         }
     }
