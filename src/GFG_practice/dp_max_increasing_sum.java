@@ -15,10 +15,10 @@ public class dp_max_increasing_sum {
 
         }
     }
-
-    static int helper2(int prev, int[] a, int index) {
-
-    }
+//
+//    static int helper2(int prev, int[] a, int index) {
+//
+//    }
 
 
     static int helper(int last, int[] a, int index, int lastSum) {
