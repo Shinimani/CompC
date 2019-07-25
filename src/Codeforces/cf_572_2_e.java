@@ -16,16 +16,4 @@ public class cf_572_2_e {
 
     }
 
-    static ArrayList<Integer> factors(int k) {
-        if (k == 0)
-            return null;
-        else {
-            ArrayList<Integer> a = new ArrayList<Integer>();
-            a.add(1);
-            for (int i = 0; i < Math.sqrt(k); i++) {
-
-            }
-        }
-    }
-
 }

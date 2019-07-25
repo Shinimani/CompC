@@ -145,6 +145,30 @@ public class Arrays {
 
     }
 
+    //    https://www.interviewbit.com/problems/largest-number/
+    public String largestNumber(final List<Integer> A) {
+        ArrayList<String> helper = new ArrayList<>();
+
+        for (int i = 0; i < A.size(); i++) {
+            helper.add("" + A.get(i));
+        }
+        Collections.sort(A);
+        StringBuilder ans = new StringBuilder();
+
+        for (int i = 0; i < A.size(); i++) {
+            ans.append(helper.get(i));
+        }
+        return ans.toString();
+        /*for (int i = 0; i < A.size(); i++) {
+            ans.append(A.get(i) + "");
+        }
+        char[] a = ans.toString().toCharArray();
+        java.util.Arrays.sort(a);
+        ans = new StringBuilder(new String(a));
+        ans.reverse();
+        return ans.toString();*/
+    }
+
 
 }
 

@@ -12,6 +12,18 @@ public class Main {
         System.out.println(a.length);
         System.out.println(a[0].length);
 
+        String[] b = new String[3];
+        b[0] = "12";
+        b[1] = "8";
+        b[2] = "89";
+        Arrays.sort(b);
+
+        for (String i : b
+        ) {
+            System.out.println(i);
+        }
+
+
 //        System.out.println();
 //        for (int i = 0; i < T; i++) {
 //            int N = s.nextInt();
