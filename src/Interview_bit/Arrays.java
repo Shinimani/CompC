@@ -2,6 +2,8 @@ package Interview_bit;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Arrays {
@@ -48,5 +50,98 @@ public class Arrays {
         return ans;
 
 
+    }
+
+    public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
+
+//        https://www.interviewbit.com/problems/merge-intervals/
+
+        int s = newInterval.start;
+        int e = newInterval.end;
+        int i = 0;
+        while (i < intervals.size() && intervals.get(i).end < s) {
+            i++;
+        }
+
+        if (i == intervals.size())
+            intervals.add(newInterval);
+        else {
+            int startofnew = Math.min(intervals.get(i).start, s);
+            while (i < intervals.size() && intervals.get(i).end < e) {
+                intervals.remove(i);
+            }
+            if (i == intervals.size()) {
+                intervals.add(new Interval(startofnew, e));
+            } else {
+                if (intervals.get(i).start > e) {
+                    Interval tob = new Interval(startofnew, e);
+                    intervals.add(i, tob);
+                } else {
+                    int endofnew = intervals.get(i).end;
+                    Interval tobeadded = new Interval(startofnew, endofnew);
+                    intervals.set(i, tobeadded);
+                }
+            }
+        }
+
+        return intervals;
+
+
+    }
+
+    public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+
+        Comparator<Interval> compareByStart = new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                return o1.start - o2.start;
+            }
+        };
+        Collections.sort(intervals, compareByStart);
+
+
+        ArrayList<Interval> ans = new ArrayList<>();
+        Interval current = new Interval(intervals.get(0).start, intervals.get(0).end);
+        for (int i = 0; i < intervals.size(); i++) {
+            Interval temp = intervals.get(i);
+            if (temp.start < current.end) {
+                if (temp.end >= current.end) {
+                    current.end = temp.end;
+                    if (!ans.isEmpty() && ans.get(ans.size() - 1).end != current.end)
+                        ans.add(current);
+                }
+            } else if (temp.start == current.end) {
+                current.end = temp.end;
+                ans.add(current);
+                if (i != intervals.size() - 1) {
+                    current = intervals.get(i + 1);
+                }
+            } else {
+                ans.add(current);
+                if (i != intervals.size() - 1) {
+                    current = intervals.get(i + 1);
+                }
+            }
+        }
+
+        return ans;
+
+    }
+
+
+}
+
+class Interval {
+    int start;
+    int end;
+
+    Interval() {
+        start = 0;
+        end = 0;
+    }
+
+    Interval(int s, int e) {
+        start = s;
+        end = e;
     }
 }
