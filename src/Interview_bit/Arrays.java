@@ -1,5 +1,6 @@
 package Interview_bit;
 
+import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -125,6 +126,22 @@ public class Arrays {
         }
 
         return ans;
+
+    }
+
+    public ArrayList<Integer> wave(ArrayList<Integer> a) {
+//    https://www.interviewbit.com/problems/wave-array/
+        Collections.sort(a);
+        int n = a.size();
+        int p, q;
+        for (int i = 0; i < n / 2; i++) {
+            p = a.get(2 * i);
+            q = a.get(2 * i + 1);
+            a.set(2 * i, q);
+            a.set(2 * i + 1, p);
+        }
+        return a;
+
 
     }
 
