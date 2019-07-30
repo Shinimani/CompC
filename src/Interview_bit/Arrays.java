@@ -153,6 +153,7 @@ public class Arrays {
             helper.add("" + A.get(i));
         }
         Collections.sort(A);
+        Collections.reverse(A);
         StringBuilder ans = new StringBuilder();
 
         for (int i = 0; i < A.size(); i++) {
