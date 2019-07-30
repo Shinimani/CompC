@@ -23,6 +23,8 @@ public class Main {
             System.out.println(i);
         }
 
+        System.out.println(2 >> 4);
+
 
 //        System.out.println();
 //        for (int i = 0; i < T; i++) {
