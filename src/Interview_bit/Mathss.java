@@ -3,6 +3,7 @@ package Interview_bit;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Mathss {
 
@@ -42,6 +43,49 @@ public class Mathss {
                 ans.add(2 * i + 1);
         return ans;
     }
+
+    //https://www.interviewbit.com/problems/prime-sum/
+    public ArrayList<Integer> primesum(int A) {
+/*
+        ArrayList<Integer> primes = SieveOfSundaram(A);
+        for (int i = 0; i < primes.size(); i++) {
+            int k = (Collections.binarySearch(primes,A-primes.get(i)));
+            if (k>=0)
+            {
+                ArrayList<Integer> ans = new ArrayList<>();
+                ans.add(primes.get(i));
+                ans.add(primes.get(k));
+                return ans;
+            }
+        }*/
+
+        boolean[] primes = new boolean[A + 1];
+        primes[0] = false;
+        primes[1] = false;
+        for (int i = 2; i <= A; i++) {
+            primes[i] = true;
+        }
+
+        for (int i = 2; i <= Math.sqrt(A); i++) {
+            for (int j = i; j * i <= A; j++) {
+                primes[j * i] = false;
+            }
+        }
+
+        for (int i = 2; i < A / 2; i++) {
+            if (primes[i] && primes[A - i]) {
+                ArrayList<Integer> ans = new ArrayList<>();
+                ans.add(i);
+                ans.add(A - i);
+                return ans;
+            }
+        }
+
+        return null;
+
+    }
+
+
 
 
 }

@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Arrays {
+public class Arrayss {
 
     public ArrayList<Integer> repeatedNumber(final List<Integer> A) {
 //        https://www.interviewbit.com/problems/repeat-and-missing-number-array/
