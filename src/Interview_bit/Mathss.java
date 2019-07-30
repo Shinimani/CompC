@@ -145,6 +145,16 @@ public class Mathss {
         return 0;
     }
 
+    public int solve(ArrayList<Integer> a, int b, int c) {
+        for (int i = 0; i < a.size(); i++) {
+
+        }
+
+        return 0;
+
+
+    }
+
 
 
 }
