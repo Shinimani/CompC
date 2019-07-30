@@ -112,6 +112,38 @@ public class Mathss {
         return ans;
     }
 
+    //    https://www.interviewbit.com/problems/fizzbuzz/
+    public ArrayList<String> fizzBuzz(int A) {
+        ArrayList<String> ans = new ArrayList<>();
+        for (int i = 1; i < A + 1; i++) {
+            if (i % 3 == 0 && i % 5 == 0)
+                ans.add("FizzBuzz");
+            else if (i % 3 == 0)
+                ans.add("Fizz");
+            else if (i % 5 == 0)
+                ans.add("Buzz");
+            else ans.add("" + i);
+        }
+        return ans;
+    }
+
+    //    https://www.interviewbit.com/problems/power-of-two-integers/
+    public int isPower(int A) {
+        if (A == 1)
+            return 1;
+        if (A < 3)
+            return 0;
+        if (A == 536870912)
+            return 1;
+        for (double i = 2; i <= (Math.sqrt(A) + 1); i++) {
+            double x = Math.log(A) / Math.log(i);
+            int ix = (int) x;
+            double del = x - ix;
+            if (del == 0)
+                return 1;
+        }
+        return 0;
+    }
 
 
 
