@@ -292,6 +292,16 @@ public class Mathss {
         return ans;
     }
 
+//    https://www.interviewbit.com/problems/greatest-common-divisor/
+
+    public int gcd(int A, int B) {
+        while (B != 0) {
+            int r = A % B;
+            A = B;
+            B = r;
+        }
+        return A;
+    }
 }
 /*
 class tuple
