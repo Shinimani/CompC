@@ -221,7 +221,38 @@ public class Mathss {
         }
         return ans;
     }
+
+    //    https://www.interviewbit.com/problems/city-tour/
+    public int solvecity(int A, ArrayList<Integer> B) {
+        boolean[] a = new boolean[A];
+        for (int i = 0; i < B.size(); i++) {
+            a[B.get(i)] = true;
+        }
+        return solvecityhelper(a);
+    }
+
+    private int solvecityhelper(boolean[] a) {
+        ArrayList<Integer> x = new ArrayList<>();
+        if (!a[0] && a[1]) x.add(0);
+        int l = a.length;
+        for (int i = 1; i < l - 1; i++) {
+            if (!a[i] && (a[i - 1] || a[i + 1])) x.add(i);
+        }
+        if (!a[l - 1] && a[l - 2]) x.add(l - 1);
+        if (x.size() == 1) return 1;
+        int ans = 0;
+        for (int i = 0; i < x.size(); i++) {
+            a[x.get(i)] = true;
+            ans += solvecityhelper(a);
+            a[x.get(i)] = false;
+        }
+        return ans;
+    }
+
 }
+
+
+
 
 
     /*
