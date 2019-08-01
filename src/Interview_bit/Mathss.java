@@ -168,6 +168,37 @@ public class Mathss {
     }
 
 
+    //    https://www.interviewbit.com/problems/rearrange-array/
+    public void arrange(ArrayList<Integer> A) {
+        int n = A.size();
+        for (int i = 0; i < n; i++) A.set(i, A.get(i) + (A.get(A.get(i)) % n) * n);
+        for (int i = 0; i < n; i++) A.set(i, A.get(i) / n);
+
+        /*   for(int j=0;j<A.size();j++)
+        {
+            if(A.get(j)>0)
+            {
+                int temp = j;
+                int val = -A.get(temp);
+                while(A.get(j)!=temp)
+                {
+                    int t = A.get(j);
+                    A.set(j,-A.get(t));
+                    j = t;
+                }
+                A.set(j,val);
+                j = temp;
+            }
+        }
+        for(int i=0;i<A.size();i++)
+            A.set(i,-A.get(i));
+    */
+    }
+
+
+}
+
+
     /*
     int nlesskhelper (ArrayList<Integer> a, int lengthh, int[] c)
     {
