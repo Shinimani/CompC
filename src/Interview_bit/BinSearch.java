@@ -2,17 +2,49 @@ package Interview_bit;
 
 public class BinSearch {
 
+
     public int pow(int x, int n, int d) {
-        int two = (int) (Math.log10(n) / Math.log10(2));
-        int rem = n - (int) Math.pow(2, two);
-        int ans = x % d;
-        for (int i = 0; i < two; i++) {
-            ans = (int) Math.pow(ans, 2) % d;
+
+        long rem = 1;
+        int check = 0;
+
+        // simple cases
+        if (x == 0) {
+            return 0;
         }
-        x = (int) Math.pow(x % d, rem) % d;
-        ans = (ans * x) % d;
+        if (n == 0) {
+            return 1;
+        }
 
-        return (ans + d) % d;
+        // make x positive, check if power is odd
+        if (x < 0) {
+            x = Math.abs(x);
+            if (n % 2 != 0) {
+                check = 1;
+            }
+        }
 
+        long temp = x % d;
+
+        while (n != 0) {
+            if (n % 2 != 0) {
+                rem = (rem * temp) % d;
+            }
+
+            temp = temp * temp;
+            temp = temp % d;
+
+            n = n / 2;
+            if (rem > d) {
+                rem = rem % d;
+            }
+        }
+
+        // if power is odd and x < 0, return d-rem
+        if (check == 1) {
+            return d - (int) rem;
+        }
+
+        return (int) rem;
     }
 }
