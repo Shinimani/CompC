@@ -202,6 +202,25 @@ public class Mathss {
         else return uniquePaths(A - 1, B) + uniquePaths(A, B - 1);
 
     }
+
+    public int uniquePaths2(int a, int b) {
+        if (a == 1 || b == 1) return 1;
+        return nck(b + a - 2, a - 1);
+    }
+
+    public int nck(int n, int k) {
+        if (k == 0 || k == n) return 1;
+        if (k == 1 || k == n - 1) return n;
+        int j = 1;
+        int x = n;
+        int ans = 1;
+        for (int i = 0; i < k; i++) {
+            ans = (ans * x) / j;
+            j++;
+            x--;
+        }
+        return ans;
+    }
 }
 
 
