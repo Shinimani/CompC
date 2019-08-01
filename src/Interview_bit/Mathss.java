@@ -223,6 +223,7 @@ public class Mathss {
     }
 
     //    https://www.interviewbit.com/problems/city-tour/
+    //recursive approach
     public int solvecity(int A, ArrayList<Integer> B) {
         boolean[] a = new boolean[A];
         for (int i = 0; i < B.size(); i++) {
@@ -249,7 +250,60 @@ public class Mathss {
         return ans;
     }
 
+    //iterative approach
+    public int solvecityiter(int a, ArrayList<Integer> b) {
+
+        if (b.size() == 1) {
+            if (b.get(0) == 1 || b.get(0) == a) return 1;
+        }
+        boolean[] barr = new boolean[a];
+        for (int i = 0; i < a; i++) {
+            barr[i] = false;
+        }
+        for (int i = 0; i < b.size(); i++) {
+            barr[b.get(i) - 1] = true;
+        }
+        int ans = 0;
+        int temp = 0;
+        for (int i = 0; i < a; i++) {
+            if (!barr[i])
+                temp++;
+            else {
+                if (ans == 0) ans = 1;
+                else {
+                    ans = (ans * nck(ans + temp, temp)) % (1000000007);
+                    ans = (ans * 2) % 1000000007;
+                    temp = 0;
+
+                }
+            }
+        }
+        if (!barr[0]) ans /= 2;
+        if (!barr[a - 1]) ans /= 2;
+        return ans;
+    }
+
+    private int fact(int n) {
+        if (n == 0 || n == 1) return 1;
+        int ans = 1;
+        for (int i = 1; i < n + 1; i++) {
+            ans = (ans * i) % (1000000007);
+        }
+        return ans;
+    }
+
 }
+/*
+class tuple
+{
+    int beg;
+    int end;
+    public tuple(int s,int e)
+    {
+        beg = s;
+        end = e;
+    }
+}*/
 
 
 
