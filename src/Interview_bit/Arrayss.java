@@ -148,30 +148,39 @@ public class Arrayss {
     //    https://www.interviewbit.com/problems/largest-number/
     public String largestNumber(final List<Integer> A) {
         ArrayList<String> helper = new ArrayList<>();
+        int k = 0;
 
         for (int i = 0; i < A.size(); i++) {
             helper.add("" + A.get(i));
+            if (A.get(i) == 0) k++;
         }
-        Collections.sort(A);
-        Collections.reverse(A);
-        StringBuilder ans = new StringBuilder();
+        if (k == A.size())
+            return "0";
+        Collections.sort(helper, new compareforLargestnumber());
+        Collections.reverse(helper);
+        StringBuilder s = new StringBuilder();
 
-        for (int i = 0; i < A.size(); i++) {
-            ans.append(helper.get(i));
+        for (int i = 0; i < helper.size(); i++) {
+            s.append(helper.get(i));
         }
-        return ans.toString();
-        /*for (int i = 0; i < A.size(); i++) {
-            ans.append(A.get(i) + "");
-        }
-        char[] a = ans.toString().toCharArray();
-        java.util.Arrays.sort(a);
-        ans = new StringBuilder(new String(a));
-        ans.reverse();
-        return ans.toString();*/
+
+        return s.toString();
     }
 
 
 }
+
+class compareforLargestnumber implements Comparator<String> {
+    public int compare(String x, String y) {
+        String a1 = x + y;
+        String a2 = y + x;
+
+        return a1.compareTo(a2);
+    }
+
+}
+
+
 
 class Interval {
     int start;
