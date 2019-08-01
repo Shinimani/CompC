@@ -168,6 +168,44 @@ public class Arrayss {
     }
 
 
+    public int titleToNumber(String A) {
+
+        int ans = 0;
+        for (int i = 0; i < A.length(); i++) {
+            ans += (26 ^ (A.length() - 1 - i)) * ((int) A.charAt(i) - 'A' + 1);
+        }
+        return ans;
+    }
+
+    //    https://www.interviewbit.com/problems/palindrome-integer/
+    public int isPalindrome(int a) {
+        if (a < 0) return 0;
+        String x = "" + a;
+        int l = x.length();
+        for (int i = 0; i < l; i++) {
+            if (x.charAt(i) != x.charAt(l - 1 - i)) return 0;
+        }
+
+        return 1;
+    }
+
+
+    //    https://www.interviewbit.com/problems/reverse-integer/
+    public int reverse(int A) {
+        boolean neg = A < 0;
+        A = Math.abs(A);
+        if (A > Math.pow(2, 32)) return 0;
+        StringBuilder s = new StringBuilder("" + A);
+        s.reverse();
+        if (s.compareTo(new StringBuilder("2147483647")) > 0) return 0;
+        int x = Integer.parseInt(s.toString());
+        if (neg)
+            return -x;
+        else return x;
+
+    }
+
+
 }
 
 class compareforLargestnumber implements Comparator<String> {
