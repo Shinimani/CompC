@@ -1,5 +1,7 @@
 package Interview_bit;
 
+import java.util.List;
+
 public class BinSearch {
 
 
@@ -47,4 +49,20 @@ public class BinSearch {
 
         return (int) rem;
     }
+
+    public int squareroot(int x) {
+
+        return (int) sqrthelper(x, 1, x);
+    }
+
+    public long sqrthelper(long x, long a, long b) {
+        if (b == a + 1) return a;
+        if (((a + b) / 2) * ((a + b) / 2) > x)
+            b = (a + b) / 2;
+        else a = (a + b) / 2;
+        if (((a * a) < x) && ((a + 1) * (a + 1) > x)) return a;
+        else return sqrthelper(x, a, b);
+    }
+
+
 }
