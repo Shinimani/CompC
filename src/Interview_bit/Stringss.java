@@ -96,6 +96,93 @@ public class Stringss {
         return (a.length() - lps[str.length() - 1]);
     }
 
+//    https://www.interviewbit.com/problems/roman-to-integer/
+
+    public int romanToInt(String A) {
+        StringBuilder s = new StringBuilder(A);
+
+        for (int i = 0; i < A.length(); i++) {
+            switch (s.charAt(i)) {
+                case 'M':
+                    s.setCharAt(i, '7');
+                    break;
+                case 'D':
+                    s.setCharAt(i, '6');
+                    break;
+                case 'C':
+                    s.setCharAt(i, '5');
+                    break;
+                case 'L':
+                    s.setCharAt(i, '4');
+                    break;
+                case 'X':
+                    s.setCharAt(i, '3');
+                    break;
+                case 'V':
+                    s.setCharAt(i, '2');
+                    break;
+                case 'I':
+                    s.setCharAt(i, '1');
+                    break;
+            }
+        }
+
+        int ans = 0;
+        // int ans = 0;
+//        char prev = s.charAt(0);
+        for (int i = 0; i < A.length(); i++) {
+            if (i == A.length() - 1)
+                ans += helperRoman(s.charAt(i));
+            else if (s.charAt(i) >= s.charAt(i + 1)) {
+                ans += helperRoman(s.charAt(i));
+//                prev = s.charAt(i);
+            } else {
+                ans += helperRoman(s.charAt(i + 1)) - helperRoman(s.charAt(i));
+                i++;
+            }
+        }
+        return ans;
+    }
+
+    public char helperRoman2(char c) {
+        switch (c) {
+            case '6':
+                return '7';
+            case '5':
+                return '6';
+            case '4':
+                return '5';
+            case '3':
+                return '4';
+            case '2':
+                return '3';
+            case '1':
+                return '2';
+        }
+        return 0;
+    }
+
+    public int helperRoman(char c) {
+        switch (c) {
+            case '7':
+                return 1000;
+            case '6':
+                return 500;
+            case '5':
+                return 100;
+            case '4':
+                return 50;
+            case '3':
+                return 10;
+            case '2':
+                return 5;
+            case '1':
+                return 1;
+        }
+        return 0;
+    }
+
+
 //    babb
 //    bbab
 
