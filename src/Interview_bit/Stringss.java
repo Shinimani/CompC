@@ -65,5 +65,38 @@ public class Stringss {
         return s.toString();
     }
 
+    //    https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/
+    void computeLPS(String s, int[] lps) {
+        int m = s.length();
+        int len = 0;
+        lps[0] = 0;
+        int i = 1;
+        while (i < m) {
+            if (s.charAt(i) == s.charAt(len)) {
+                len++;
+                lps[i] = len;
+                i++;
+            } else {
+                if (len != 0) {
+                    len = lps[len - 1];
+                } else {
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+    }
+
+    public int solveMinPalindrome(String a) {
+        StringBuilder s = new StringBuilder(a);
+        s = s.reverse();
+        String str = a + "$" + s.toString();
+        int[] lps = new int[str.length()];
+        computeLPS(str, lps);
+        return (a.length() - lps[str.length() - 1]);
+    }
+
+//    babb
+//    bbab
 
 }
