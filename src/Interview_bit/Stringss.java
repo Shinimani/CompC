@@ -32,7 +32,7 @@ public class Stringss {
     }
 
     //    https://www.interviewbit.com/problems/count-and-say/
-    public String countAndSay(int A) {
+    public String countAndSay(int n) {
         if (n == 1) return "1";
         else if (n == 2) return "11";
         else {
