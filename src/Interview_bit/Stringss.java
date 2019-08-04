@@ -1,6 +1,8 @@
 package Interview_bit;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Stringss {
 
@@ -180,6 +182,27 @@ public class Stringss {
                 return 1;
         }
         return 0;
+    }
+
+    //    https://www.interviewbit.com/problems/reverse-the-string/
+    public String reverseWords(String a) {
+        a = a.trim();
+        String[] x = a.split(" ");
+
+        String[] b = new String[x.length];
+        int j = x.length;
+        for (int i = 0; i < x.length; i++) {
+            b[j - 1] = x[i];
+            j = j - 1;
+        }
+
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < x.length; i++) {
+            s.append(b[i] + " ");
+        }
+        s.deleteCharAt(s.length() - 1);
+        return s.toString();
+
     }
 
 
