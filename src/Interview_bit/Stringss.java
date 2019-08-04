@@ -30,4 +30,40 @@ public class Stringss {
 
         return x;
     }
+
+    //    https://www.interviewbit.com/problems/count-and-say/
+    public String countAndSay(int A) {
+        if (n == 1) return "1";
+        else if (n == 2) return "11";
+        else {
+            String x = "11";
+            while (n-- > 2) {
+                x = countAndSayhelper(x);
+            }
+            return x;
+        }
+
+
+    }
+
+    public String countAndSayhelper(String x) {
+        char temp = x.charAt(0);
+        int cou = 1;
+        StringBuilder s = new StringBuilder();
+        for (int i = 1; i < x.length(); i++) {
+            if (x.charAt(i) == temp)
+                cou++;
+            else {
+                s.append("" + cou + temp);
+                temp = x.charAt(i);
+                cou = 1;
+            }
+            if (i == x.length() - 1) {
+                s.append("" + cou + temp);
+            }
+        }
+        return s.toString();
+    }
+
+
 }
