@@ -238,6 +238,46 @@ public class Arrayss {
         return ans;
     }
 
+    //    https://www.interviewbit.com/problems/set-matrix-zeros/
+    public void setZeroes(ArrayList<ArrayList<Integer>> a) {
+        int n = a.size();
+        int m = a.get(0).size();
+
+        boolean[] nb = new boolean[n];
+        boolean[] mb = new boolean[m];
+
+        for (int i = 0; i < n; i++) {
+            nb[i] = false;
+        }
+        for (int i = 0; i < m; i++) {
+            mb[i] = false;
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (a.get(i).get(j) == 0) {
+                    nb[i] = true;
+                    mb[j] = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (nb[i]) {
+                for (int j = 0; j < m; j++) {
+                    a.get(i).set(j, 0);
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+            if (mb[i]) {
+                for (int j = 0; j < n; j++) {
+                    a.get(j).set(i, 0);
+                }
+            }
+        }
+
+    }
 
 
 
