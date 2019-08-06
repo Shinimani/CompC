@@ -205,6 +205,41 @@ public class Arrayss {
 
     }
 
+    public ArrayList<Integer> maxset(ArrayList<Integer> a) {
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+        int maxsum = 0;
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+        int sum = 0;
+
+        for (int i = 0; i < a.size(); i++) {
+            int t = a.get(i);
+            if (t >= 0) {
+                temp.add(t);
+                sum += t;
+                if (sum > maxsum) {
+                    ans = shift(temp);
+                    maxsum = sum;
+                } else if (sum == maxsum) {
+                    if (ans.size() < temp.size())
+                        ans.clear();
+                    ans = shift(temp);
+                }
+            } else temp.clear();
+        }
+        return ans;
+    }
+
+    public ArrayList<Integer> shift(ArrayList<Integer> a) {
+
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int i = 0; i < a.size(); i++) {
+            ans.add(a.get(i));
+        }
+        return ans;
+    }
+
+
+
 
 }
 
