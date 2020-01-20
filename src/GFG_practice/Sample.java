@@ -8,6 +8,7 @@ public class Sample {
             int n = f.nextInt();
             int[] a = f.nextIntArray(n);
 
+
         }
     }
 }

@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a403fe6-ffa1-462f-b518-c0207acc107b" name="Default Changelist" comment="Started cf_602&#10;Question a skipped, b done">
+      <change beforePath="$PROJECT_DIR$/C++/intro.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C++/intro.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C++/notes" beforeDir="false" afterPath="$PROJECT_DIR$/C++/notes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GFG_practice/Sample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GFG_practice/Sample.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CompC" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Singleton" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/GFG_practice/sub_sum.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/sort_123.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/equi_point.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/kadanes.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/segregate_even_odd.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/parent.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/FastScanner.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/FastScanner.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_552_div3_B.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/parenthesis.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/longest_increasing.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/unique_paths.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/max_sum_bitonic.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/special_numbers.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/rec_print_pattern.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/rec_handshakes.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/longest_conseq_subseq.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/rec_hanoi.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/rec_adjacent_duplicates.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/rec_flood_fill.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_minoperations.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/rec_permutations_of_word.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_max_len_chain.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_min_coins.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_max_toys.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_max_substring.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_max_subseq.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/count_the_triplets.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/dp_max_increasing_sum.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_572_2_a.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_572_2_b.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_572_2_c.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_572_2_d1.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_single_sample.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/max_abs_diff.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/min_steps_in_inf_grid.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/add_1_to_number.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_572_2_e.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/Arrays.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/Mathss.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/BinSearch.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/Stringss.java" />
+        <option value="$PROJECT_DIR$/src/Interview_bit/Arrayss.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/Sample.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/ICPC19.java" />
+        <option value="$PROJECT_DIR$/src/GFG_practice/ICPC192.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_602_a.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_602_c.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/samyak.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="293" />
+    <option name="y" value="53" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="MANAGE_IGNORE_FILES_PROPERTY" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Codeforces" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="CompC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cf_572_2_b" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Codeforces.cf_572_2_b" />
+      <module name="CompC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Codeforces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cf_572_2_c" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Codeforces.cf_572_2_c" />
+      <module name="CompC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Codeforces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cf_572_2_d1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Codeforces.cf_572_2_d1" />
+      <module name="CompC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Codeforces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cf_572_2_e" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Codeforces.cf_572_2_e" />
+      <module name="CompC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Codeforces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.cf_572_2_e" />
+        <item itemvalue="Application.cf_572_2_d1" />
+        <item itemvalue="Application.cf_572_2_c" />
+        <item itemvalue="Application.cf_572_2_b" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a403fe6-ffa1-462f-b518-c0207acc107b" name="Default Changelist" comment="" />
+      <created>1554642419072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554642419072</updated>
+      <workItem from="1554642424683" duration="169000" />
+      <workItem from="1554642646340" duration="8795000" />
+      <workItem from="1557414060230" duration="6179000" />
+      <workItem from="1557468547875" duration="10318000" />
+      <workItem from="1558271210426" duration="8159000" />
+      <workItem from="1558505749233" duration="3555000" />
+      <workItem from="1559628539578" duration="5629000" />
+      <workItem from="1559827351821" duration="3624000" />
+      <workItem from="1559874281726" duration="10186000" />
+      <workItem from="1559971524259" duration="14000" />
+      <workItem from="1559971572095" duration="19765000" />
+      <workItem from="1560488834024" duration="8653000" />
+      <workItem from="1560629100124" duration="14458000" />
+      <workItem from="1560783954880" duration="3884000" />
+      <workItem from="1560843509185" duration="3872000" />
+      <workItem from="1560968128155" duration="3613000" />
+      <workItem from="1561112500924" duration="1405000" />
+      <workItem from="1561464601031" duration="6317000" />
+      <workItem from="1562133114306" duration="1565000" />
+      <workItem from="1562356562297" duration="8868000" />
+      <workItem from="1562424019160" duration="2746000" />
+      <workItem from="1562558838254" duration="644000" />
+      <workItem from="1563352990024" duration="599000" />
+      <workItem from="1563475247129" duration="2669000" />
+      <workItem from="1563963698298" duration="10388000" />
+      <workItem from="1564047934266" duration="55000" />
+      <workItem from="1564050256387" duration="3059000" />
+      <workItem from="1564490862030" duration="9213000" />
+      <workItem from="1564622543916" duration="19531000" />
+      <workItem from="1564933913412" duration="8370000" />
+      <workItem from="1565082391543" duration="2897000" />
+      <workItem from="1565378094945" duration="625000" />
+      <workItem from="1565713570994" duration="24000" />
+      <workItem from="1571397341108" duration="8519000" />
+      <workItem from="1572867606982" duration="30000" />
+      <workItem from="1575207062752" duration="116000" />
+      <workItem from="1575207374687" duration="6374000" />
+      <workItem from="1576765201434" duration="1249000" />
+      <workItem from="1579090259644" duration="141000" />
+    </task>
+    <task id="LOCAL-00031" summary="Correct Code">
+      <created>1560632454752</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1560632454752</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Correct Code">
+      <created>1560633804705</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1560633804705</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Started the code">
+      <created>1560634308730</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1560634308730</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Correct code">
+      <created>1560843894609</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1560843894609</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Correct code">
+      <created>1560866727616</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1560866727616</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Correct code">
+      <created>1561007577857</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1561007577857</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Correct code">
+      <created>1561116103775</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1561116103775</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Correct code">
+      <created>1561465677958</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1561465677958</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Correct code">
+      <created>1561467485563</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1561467485563</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Correct code">
+      <created>1561467603947</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1561467603947</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Correct code">
+      <created>1562142022902</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1562142022902</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Correct code">
+      <created>1562357386294</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1562357386294</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Correct code">
+      <created>1562390784142</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1562390784142</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Correct code">
+      <created>1562425654354</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1562425654354</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Sample for codeforces">
+      <created>1562558947768</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1562558947768</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Sample for codeforces">
+      <created>1563510728627</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1563510728628</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Correct code">
+      <created>1563964600903</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1563964600903</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Correct code">
+      <created>1563965282909</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1563965282909</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Correct code&#10;Typecast int to long everywhere">
+      <created>1563968528290</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1563968528290</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Edited code">
+      <created>1564047989184</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1564047989184</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Correct code">
+      <created>1564051123383</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1564051123384</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Some edits">
+      <created>1564054674918</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1564054674919</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Started maths, added Sieve of Sundaram">
+      <created>1564491396380</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1564491396381</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Renamed Arrays to Arrayss">
+      <created>1564491451734</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1564491451734</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Another program to find primes till n, easier to understand">
+      <created>1564492434403</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1564492434403</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Bitwise operator question">
+      <created>1564496447882</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1564496447882</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Is power">
+      <created>1564500642467</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1564500642467</updated>
+    </task>
+    <task id="LOCAL-00058" summary="To shift to windows">
+      <created>1564503577224</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1564503577225</updated>
+    </task>
+    <task id="LOCAL-00059" summary="To look at solution again">
+      <created>1564625814659</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1564625814659</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Encoding problem">
+      <created>1564627166574</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1564627166575</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Largest number problem with custom comparator">
+      <created>1564628563839</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1564628563839</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Time waste questions">
+      <created>1564634487114</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1564634487114</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Unique paths in grid recursive">
+      <created>1564634728252</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1564634728252</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Unique paths in grid nCk">
+      <created>1564634751319</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1564634751319</updated>
+    </task>
+    <task id="LOCAL-00065" summary="City traversal recursive (time limit exceed)">
+      <created>1564635893744</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1564635893744</updated>
+    </task>
+    <task id="LOCAL-00066" summary="City solver not done, need to understand solution">
+      <created>1564654346930</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1564654346930</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Gcd">
+      <created>1564654900522</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1564654900522</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Started bin search topic, x^n%d implementation">
+      <created>1564655743155</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1564655743155</updated>
+    </task>
+    <task id="LOCAL-00069" summary="x^n%d implementation completed">
+      <created>1564657002632</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1564657002633</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Brrr">
+      <created>1564669963237</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1564669963238</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Longest common prefix">
+      <created>1564934624939</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1564934624940</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Count and say">
+      <created>1564935520844</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1564935520844</updated>
+    </task>
+    <task id="LOCAL-00073" summary="LPS to find minimum Palindrome">
+      <created>1564940456492</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1564940456492</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Roman to integer">
+      <created>1564943016824</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1564943016824</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Error fix">
+      <created>1564943074179</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1564943074179</updated>
+    </task>
+    <task id="LOCAL-00076" summary="String.trim() and String.split() usage">
+      <created>1564943663806</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1564943663806</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Arrays max non neg subarray">
+      <created>1565082993881</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1565082993882</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Random question">
+      <created>1565083843942</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1565083843942</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Started cf_602&#10;Question a skipped, b done">
+      <created>1575208546405</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1575208546413</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="206277000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46564886" visible="true" weight="0.39346984" />
+      <window_info id="Structure" order="1" sideWeight="0.53435117" side_tool="true" visible="true" weight="0.39346984" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" weight="0.33370227" />
+      <window_info id="Favorites" order="7" sideWeight="0.5016779" side_tool="true" weight="0.29662424" />
+      <window_info anchor="bottom" id="GitHub Pull Requests" order="0" weight="0.32937366" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3563715" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32937366" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="13" visible="true" weight="0.3293348" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Another program to find primes till n, easier to understand" />
+    <MESSAGE value="Bitwise operator question" />
+    <MESSAGE value="Is power" />
+    <MESSAGE value="To shift to windows" />
+    <MESSAGE value="To look at solution again" />
+    <MESSAGE value="Encoding problem" />
+    <MESSAGE value="Largest number problem with custom comparator" />
+    <MESSAGE value="Time waste questions" />
+    <MESSAGE value="Unique paths in grid recursive" />
+    <MESSAGE value="Unique paths in grid nCk" />
+    <MESSAGE value="City traversal recursive (time limit exceed)" />
+    <MESSAGE value="City solver not done, need to understand solution" />
+    <MESSAGE value="Gcd" />
+    <MESSAGE value="Started bin search topic, x^n%d implementation" />
+    <MESSAGE value="x^n%d implementation completed" />
+    <MESSAGE value="Brrr" />
+    <MESSAGE value="Longest common prefix" />
+    <MESSAGE value="Count and say" />
+    <MESSAGE value="LPS to find minimum Palindrome" />
+    <MESSAGE value="Roman to integer" />
+    <MESSAGE value="Error fix" />
+    <MESSAGE value="String.trim() and String.split() usage" />
+    <MESSAGE value="Arrays max non neg subarray" />
+    <MESSAGE value="Random question" />
+    <MESSAGE value="Started cf_602&#10;Question a skipped, b done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started cf_602&#10;Question a skipped, b done" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/equi_point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/sort_123.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="5" selection-start-line="4" selection-start-column="3" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/kadanes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/segregate_even_odd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="14" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_552_div3_B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#364#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/unique_paths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/parenthesis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/special_numbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/rec_print_pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/rec_handshakes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/rec_hanoi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/rec_adjacent_duplicates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/rec_permutations_of_word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/rec_flood_fill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_minoperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_max_toys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_min_coins.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_max_substring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_max_subseq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_max_len_chain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/longest_increasing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/max_sum_bitonic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/longest_conseq_subseq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/count_the_triplets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/FastScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_572_2_a.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_572_2_b.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_572_2_c.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="92" selection-start-line="92" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_single_sample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/dp_max_increasing_sum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" selection-start-line="17" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_572_2_d1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/max_abs_diff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/min_steps_in_inf_grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/add_1_to_number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_572_2_e.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/Arrayss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="240" column="34" selection-start-line="240" selection-start-column="34" selection-end-line="240" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#repeatedNumber#0;class#Arrayss#0" />
+            <element signature="method#insert#0;class#Arrayss#0" />
+            <element signature="method#merge#0;class#Arrayss#0" />
+            <element signature="e#3179#3180#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="method#wave#0;class#Arrayss#0" />
+            <element signature="method#largestNumber#0;class#Arrayss#0" />
+            <element signature="method#titleToNumber#0;class#Arrayss#0" />
+            <element signature="method#isPalindrome#0;class#Arrayss#0" />
+            <element signature="method#reverse#0;class#Arrayss#0" />
+            <element signature="method#shift#0;class#Arrayss#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/Mathss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="303" column="5" selection-start-line="303" selection-start-column="5" selection-end-line="303" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#SieveOfSundaram#0;class#Mathss#0" />
+            <element signature="method#primesum#0;class#Mathss#0" />
+            <element signature="method#hammingDistance#0;class#Mathss#0" />
+            <element signature="method#helperForHamming#0;class#Mathss#0" />
+            <element signature="method#fizzBuzz#0;class#Mathss#0" />
+            <element signature="method#isPower#0;class#Mathss#0" />
+            <element signature="method#solve#0;class#Mathss#0" />
+            <element signature="method#arrange#0;class#Mathss#0" />
+            <element signature="method#nck#0;class#Mathss#0" />
+            <element signature="method#solvecity#0;class#Mathss#0" />
+            <element signature="method#solvecityiter#0;class#Mathss#0" />
+            <element signature="method#fact#0;class#Mathss#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/Stringss.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#longestCommonPrefix#0;class#Stringss#0" />
+            <element signature="method#countAndSayhelper#0;class#Stringss#0" />
+            <element signature="method#computeLPS#0;class#Stringss#0" />
+            <element signature="method#romanToInt#0;class#Stringss#0" />
+            <element signature="method#helperRoman2#0;class#Stringss#0" />
+            <element signature="method#helperRoman#0;class#Stringss#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/ICPC192.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interview_bit/BinSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="method#pow#0;class#BinSearch#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/FastScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/ICPC19.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/samyak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_602_c.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_602_a.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/Sample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="5" selection-start-line="3" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
