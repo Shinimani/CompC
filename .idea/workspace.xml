@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a403fe6-ffa1-462f-b518-c0207acc107b" name="Default Changelist" comment="Started cf_602&#10;Question a skipped, b done">
-      <change beforePath="$PROJECT_DIR$/C++/intro.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C++/intro.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C++/notes" beforeDir="false" afterPath="$PROJECT_DIR$/C++/notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GFG_practice/Sample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GFG_practice/Sample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Codeforces/Codechef.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +18,47 @@
     <favorites_list name="CompC" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GFG_practice/bin_search.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Codeforces/_564_div2_C.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_A.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Codeforces/Codechef.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,8 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GFG_practice/sub_sum.java" />
-        <option value="$PROJECT_DIR$/src/GFG_practice/sort_123.java" />
         <option value="$PROJECT_DIR$/src/GFG_practice/equi_point.java" />
         <option value="$PROJECT_DIR$/src/GFG_practice/kadanes.java" />
         <option value="$PROJECT_DIR$/src/GFG_practice/segregate_even_odd.java" />
@@ -87,6 +123,8 @@
         <option value="$PROJECT_DIR$/src/Codeforces/cf_602_c.java" />
         <option value="$PROJECT_DIR$/src/Codeforces/samyak.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/cf_561_div2_A.java" />
+        <option value="$PROJECT_DIR$/src/Codeforces/Codechef.java" />
       </list>
     </option>
   </component>
@@ -102,9 +140,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="CompC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CompC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="CompC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CompC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CompC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CompC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Codeforces" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CompC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CompC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="GFG_practice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="CompC" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="CompC" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Interview_bit" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,6 +332,7 @@
       <workItem from="1575207374687" duration="6374000" />
       <workItem from="1576765201434" duration="1249000" />
       <workItem from="1579090259644" duration="141000" />
+      <workItem from="1581071409242" duration="332000" />
     </task>
     <task id="LOCAL-00031" summary="Correct Code">
       <created>1560632454752</created>
@@ -609,7 +681,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206277000" />
+    <option name="totallyTimeSpent" value="206609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,9 +694,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46564886" visible="true" weight="0.39346984" />
-      <window_info id="Structure" order="1" sideWeight="0.53435117" side_tool="true" visible="true" weight="0.39346984" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46455833" visible="true" weight="0.39845046" />
+      <window_info id="Structure" order="1" sideWeight="0.53544164" side_tool="true" visible="true" weight="0.39845046" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -729,44 +802,6 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_C.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GFG_practice/equi_point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GFG_practice/sort_123.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="5" selection-start-line="4" selection-start-column="3" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_B.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GFG_practice/kadanes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -780,16 +815,6 @@
           <caret line="16" lean-forward="true" selection-start-line="14" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_552_div3_B.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="e#364#373#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1158,6 +1183,54 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/B1_Cat_Party_Easy_Edition_forces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GFG_practice/bin_search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_552_div3_B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#364#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/cf_561_div2_A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/_564_div2_C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codeforces/Codechef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
