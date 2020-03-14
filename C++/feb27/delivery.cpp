@@ -76,26 +76,59 @@ void printArr(int a[],int n)
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-    int t,n,p,i,k;
-    long long ans,max[51],min[51];
-    min[0]=0;
-    max[0]=0;
-    for(int i=1;i<51;i++)
+    int n,x,y;
+    cin>>n>>x>>y;
+    int a[n],b[n],d,idx;
+    long long ans=0;
+    vector<pair<int,int>> diff;
+    // tuple diff[n];
+    for(int i=0;i<n;i++)
+    cin>>a[i];
+    for(int i=0;i<n;i++)
+    cin>>b[i];
+    for(int i=0;i<n;i++)
     {
-        k=i/2;
-        max[i]=max[i-1]+i+1;
-        min[i]=i+1+min[k]+min[i-k-1];
-    }
-
-    // cout<<"hello\n";
-    cin>>t;
-    while(t--)
-    {
-        cin>>n>>p;
-        if(p<min[n])cout<<"-1\n";
-        else if (p<=max[n]) cout<<"0\n";
-        else cout<<p-max[n]<<"\n";
-        // if(max>=p && min[n]<=p) cout<<"0\n"; else if (p>max) cout<<p-max<<"\n";else cout<<"-1\n";
+        d=abs(a[i]-b[i]);
+        idx=i;
+        diff.push_back(make_pair(d,i));
     }    
+    sort(diff.begin(),diff.end(),greater<pair<int,int>>());
+    int acount=0,bcount=0;
+    for(int i=0;i<n;i++)
+    {
+        d=diff[i].first;
+        idx=diff[i].second;
+        if(a[idx]>b[idx])
+        {
+            if (acount<x)
+            {
+                ans+=a[idx];
+                acount++;
+            }
+            else 
+            {
+                ans+=b[idx];
+                bcount++;
+            }
+        } else 
+        {
+            if (bcount<y)
+            {
+                ans+=b[idx];
+                bcount++;
+            }
+            else 
+            {
+                ans+=a[idx];
+                acount++;
+            }
+        }
+    }    
+    cout<<ans<<"\n";
+    
+
+
+    
+    
     return 0;
 }
