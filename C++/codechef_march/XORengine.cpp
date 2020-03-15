@@ -36,7 +36,7 @@ int parity(int x)
 int main(){
     // ios::sync_with_stdio(false);
     // cin.tie(NULL);
-    int t,n,q,temp,p,odd;
+    int t,n,q,temp,p,one,even;
     fastscan(t);
     // bitset<28> bset;
     // bitset<28> pp;
@@ -52,36 +52,25 @@ int main(){
         // bitset<28> arr[n];
         int arr[n];
         // bset=0;
+        one=0;
         for(int i=0;i<n;i++)
         {
             fastscan(temp);
-            arr[i]=temp;
+            temp = parity(temp);
+            if (temp==1) one++;
+            // arr[i]=temp;
             // cin>>temp;
             // arr[i]=temp;
         }
         for(int i=0;i<q;i++)
         {
-            odd=0;
+            // odd=0;
             fastscan(p);
-            // temp = parity()
-            // pp =p;
-            // if(n&1!=0)
-            // {
-            //     pp^=bset;
-            // } else pp=bset;
-            // odd=pp.count();
-            for(int j=0;j<n;j++)
-            {
-                temp=parity(arr[j]^p);
-                // bset=arr[j]^pp;
-                // bset=bset.count();
-                // bset=bset&two;
-                if (temp==1)
-                {
-                    odd++;
-                }
-            }
-            printf("%d %d\n",n-odd,odd);
+            p = parity(p);
+            if(p==1)
+                even = one;
+            else even = n-one;
+            printf("%d %d\n",even,n-even);
 
             // cout<<n-odd<<" "<<odd<<"\n";
         }
