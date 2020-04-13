@@ -31,7 +31,7 @@ using namespace std;
 // #define cin __io__
 // } __io__;
 // /**************************************************************************************************/
- 
+
 
 // void fastscan(int &x)
 // {
@@ -49,8 +49,8 @@ using namespace std;
 //     if(neg)
 //         x *=-1;
 // } 
-
-long long gcd(long long u,long long v)
+#define MODLS 1000000007 
+int gcd(int u,int v)
 {
 	if(v==0)
 	return u;
@@ -58,58 +58,128 @@ long long gcd(long long u,long long v)
 	else
 	return gcd(v,u%v);
 }
-// // #define MAX 1000000
-// int primes[100009],last[1000009]={},cnt=0;
+// // // #define MAX 1000000
+int primes[100009],cnt=0;
 // vector<int> factors[1000009];
-// char str[1000009];
-// void pre()
-// {
-//     // calcualting primes
-//     int n=10000;
-//     for(int i=2; i*i<=n; i++)
-//         if(str[i]==0)
-//             for(int j=i; j*i<=n; j++)
-//                 str[i*j]=1;
-//     for(int i=2; i<=n; i++)
-//         if(str[i]==0)primes[cnt]=i,cnt++;
-// }
+char str[1000009];
+void pre()
+{
+    // calcualting primes
+    int n=1000000;
+    for(int i=2; i*i<=n; i++)
+        if(str[i]==0)
+            for(int j=i; j*i<=n; j++)
+                str[i*j]=1;
+    for(int i=2; i<=n; i++)
+        if(str[i]==0)primes[cnt]=i,cnt++;
+}
 // #define pb push_back
 int main()
 {
-    int t;
-    int n,trace,row,col,num;
-    int arr[101][101];
-    set<int> rows;
-    set<int> cols;
-    bitset<101> bset[201];
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t,n;
+    // int arr[101];
+    vector<vector<int>> ans;
+    pre();
+    int cou,i,j,p;
     cin>>t;
-    bitset<101> zero(0);
-    for(int test=1;test<=t;test++)
+    // long long ans;
+    int x,k;
+    bool flag;
+    while(t--)
     {
+        memset(str,'0',sizeof(str));
         cin>>n;
-        rows.clear();
-        cols.clear();
-        trace=0,row=0,col=0;
-        memset(arr,-1,sizeof(arr));
-
-        memset(bset,0,sizeof(bset));
-        for(int i=1;i<=n;i++)
+        k=0;
+        // ans.clear();
+        
+        for(i=1;i<=(n/2);i++)
         {
-            for(int j=1;j<=n;j++)
+            vector<int> temp;
+            temp.push_back(2*i);
+            ans.push_back(temp);
+            k++;
+            str[2*i]='1';
+        }
+        ans[0].push_back(1);
+        str[1]='1';
+        k++;
+        x=3;i=0;cou=1;
+        while(x*cou<=n)
+        {
+            if(str[x*cou]=='0')
             {
-                cin>>num;
-                if(i==j) trace+=num;
+                if(i%3==2)
+                    i++;
+                ans[i].push_back(x*cou);
+                str[x*cou]='1';
+                i++;
+            }
+            cou++;
+        }
+        for(i=2;primes[i]<=sqrt(n);i++)
+        {
+            x=primes[i];
+            // cout<<x<<endl<<endl;
+            if(str[x]=='0')
+                ans[0].push_back(x);
+            str[x]='1';
 
-                if(bset[i][num]) rows.insert(i);
-                else bset[i].set(num);
-                if(bset[100+j][num])cols.insert(j);
-                else bset[100+j].set(num);
+            cou=1;
+            j=1;
+            while(x*cou<=n)
+            {
+                cou++;
+                if(str[x*cou]=='0')
+                {
+                    flag=true;
+                    while(flag)
+                    {
+                        for(p=0;p<ans[j].size();p++)
+                        {
+                            if(gcd(ans[j][p],x*cou)!=1)
+                            {
+                                j++;break;
+                            }
+                        }
+                        if(p==ans[j].size())
+                            flag=true;
+                    }
+                    ans[j].push_back(x*cou);
+                    str[x*cou]='1';
+
+                    j++;
+                }
+
             }
         }
-        cout<<"Case #"<<test<<": "<<trace<<" "<<rows.size()<<" "<<cols.size()<<endl;
-
-
+        // ans[0]+=(n-k);
+        if(k!=n)
+        {
+            for(int i=1;i<=n;i++)
+            {
+                if(str[i]=='0')
+                {
+                    ans[0].push_back(i);
+                }
+            }
+        }
+        // cout<<
+        cout<<ans.size()<<endl;
+        for(i=0;i<ans.size();i++)
+        {
+            cout<<ans[i].size()<<" ";
+            for(auto j:ans[i])
+            {
+                cout<<j<<" ";
+            }
+            cout<<endl;
+        }
+        // cout<<primes[0]<<primes[1]<<primes[2]<<primes[3]<<primes[4];
+        // cout<<ans<<endl;
     }
+    
 
 
 

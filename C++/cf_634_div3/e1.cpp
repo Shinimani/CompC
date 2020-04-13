@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 // /************************************************************************************************/
 // static struct IO {char tmp[1 << 10];char cur;inline char nextChar()
@@ -31,38 +31,25 @@ using namespace std;
 // #define cin __io__
 // } __io__;
 // /**************************************************************************************************/
- 
 
 
-void fastscan(int &number) 
-{ 
-    //variable to indicate sign of input number 
-    bool negative = false; 
-    register int c; 
-  
-    number = 0; 
-  
-    // extract current character from buffer 
-    c = getchar(); 
-    if (c=='-') 
-    { 
-        // number is negative 
-        negative = true; 
-  
-        // extract the next character from the buffer 
-        c = getchar(); 
-    } 
-  
-    // Keep on extracting characters if they are integers 
-    // i.e ASCII Value lies from '0'(48) to '9' (57) 
-    for (; (c>47 && c<58); c=getchar()) 
-        number = number *10 + c - 48; 
-  
-    // if scanned input has a negative sign, negate the 
-    // value of the input number 
-    if (negative) 
-        number *= -1; 
-} 
+// void fastscan(int &x)
+// {
+//     bool neg=false;
+//     register int c;
+//     x =0;
+//     c=getchar();
+//     if(c=='-')
+//     {
+//         neg = true;
+//         c=getchar();
+//     }
+//     for(;(c>47 && c<58);c=getchar())
+//         x = (x<<1) + (x<<3) +c -48;
+//     if(neg)
+//         x *=-1;
+// } 
+#define MODLS 1000000007 
 int gcd(int u,int v)
 {
 	if(v==0)
@@ -71,43 +58,65 @@ int gcd(int u,int v)
 	else
 	return gcd(v,u%v);
 }
+// // // #define MAX 1000000
+int primes[100009],cnt=0;
+// vector<int> factors[1000009];
+char str[1000009];
+void pre()
+{
+    // calcualting primes
+    int n=1000000;
+    for(int i=2; i*i<=n; i++)
+        if(str[i]==0)
+            for(int j=i; j*i<=n; j++)
+                str[i*j]=1;
+    for(int i=2; i<=n; i++)
+        if(str[i]==0)primes[cnt]=i,cnt++;
+}
+// #define pb push_back
 int main()
 {
-    int n;
-    cin>>n;
-    long long adj[2001][40]={0LL};
-    string s;
-    int x,y;
-    for(int i=0;i<n;i++)
-    {
-        cin>>s;
-        for(int j =0;j<n;j++)
-        {
-            if(s[j]=='0') continue;
-            x=j/64;
-            y=j%64;
-            adj[i][x] |= (1LL<<y);
-        }
-    }
-    int ans=0;
-    int nn = (n+63)/64;
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            if (i==j) continue;
-            x=j/64;
-            y=j%64;
-            if(adj[i][x] & (1LL<<y)) continue;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t,n,temp;
+    cin>>t;
+    vector<int> arr;
+    int ans;
+    unordered_map<int,vector<int>> mp;
+    unordered_map<int,vector<int>>:: iterator p,q;
 
-            for(y=0;y<=nn;y++)
-            {
-                if (adj[i][y] & adj[j][y]) break; 
-            }
-            if (y<=nn) ans++;
+    while(t--)
+    {
+        // sud.clear();
+        arr.clear();
+        mp.clear();
+        cin>>n;
+        ans=0;
+        for(int i=0;i<n;i++)
+        {
+            cin>>temp;
+            arr.push_back(temp);
+            mp[temp].push_back(i);
         }
+        for(p=mp.begin();p!=mp.end();p++)
+        {
+            for(q=++p;q!=mp.end();q++)
+            {
+                // p--;
+
+            }
+        }
+    
+
+        
     }
-    cout<<ans<<endl;
+    // char ch = 97;
+    // char cb = ch+1;
+    // cout<<cb<<endl;
+
+
+
+    
  	return 0;
 }
  

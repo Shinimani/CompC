@@ -76,50 +76,50 @@ long long gcd(long long u,long long v)
 // #define pb push_back
 int main()
 {
-    ios_base::sync_with_stdio(false); 
-    cin.tie(NULL);
-    
-    int test,n;
-    string s;
-    string ans;
-    int open,close;
-    int k;
-    char c;
-    cin>>test;
-    for(int t=1;t<=test;t++)
+    // ios_base::sync_with_stdio(false);
+    // cin.tie(NULL);
+    int t,n;
+    // int arr[101];
+    int temp;
+    cin>>t;
+    int cou=0;
+    bool flag=true;
+    bool ans;
+    while(t--)
     {
-        cin>>s;
-        n=s.length();
-        open=0;close=0;
-        ans.clear();
-        ans="";
+        cin>>n;
+        flag=true;
+        ans=true;
+        cou=0;
         for(int i=0;i<n;i++)
         {
-            k=s[i] -48;
-
-            // if(open>k)
-            while(open>k)
+            cin>>temp;
+            if(!ans)continue;
+            if(flag)
             {
-                ans.push_back(')');
-                open--;
-            }
-            while(open<k)
+                if(temp==1)
+                flag=false;
+                // cou++;   
+            } else
             {
-                ans.push_back('(');
-                open++;
+                cou++;
+                if(temp==1)
+                    {
+                        if (cou<6)
+                            ans=false;
+                        else cou=0;
+                    }
             }
-            c = k+48;
-            ans.push_back(c);
         }
-        while(open>0)
-        {
-            ans.push_back(')');
-            open--;
-        }
-        cout<<"Case #"<<t<<": "<<ans<<"\n";
-
+        if(ans)
+            cout<<"YES\n";
+            else cout<<"NO\n";
     }
+    
 
+
+
+    
  	return 0;
 }
  

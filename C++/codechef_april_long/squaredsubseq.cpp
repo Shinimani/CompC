@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 // /************************************************************************************************/
 // static struct IO {char tmp[1 << 10];char cur;inline char nextChar()
@@ -31,39 +31,26 @@ using namespace std;
 // #define cin __io__
 // } __io__;
 // /**************************************************************************************************/
- 
 
 
-void fastscan(int &number) 
-{ 
-    //variable to indicate sign of input number 
-    bool negative = false; 
-    register int c; 
-  
-    number = 0; 
-  
-    // extract current character from buffer 
-    c = getchar(); 
-    if (c=='-') 
-    { 
-        // number is negative 
-        negative = true; 
-  
-        // extract the next character from the buffer 
-        c = getchar(); 
-    } 
-  
-    // Keep on extracting characters if they are integers 
-    // i.e ASCII Value lies from '0'(48) to '9' (57) 
-    for (; (c>47 && c<58); c=getchar()) 
-        number = number *10 + c - 48; 
-  
-    // if scanned input has a negative sign, negate the 
-    // value of the input number 
-    if (negative) 
-        number *= -1; 
-} 
-int gcd(int u,int v)
+// void fastscan(int &x)
+// {
+//     bool neg=false;
+//     register int c;
+//     x =0;
+//     c=getchar();
+//     if(c=='-')
+//     {
+//         neg = true;
+//         c=getchar();
+//     }
+//     for(;(c>47 && c<58);c=getchar())
+//         x = (x<<1) + (x<<3) +c -48;
+//     if(neg)
+//         x *=-1;
+// } 
+// #define MODLS 1000000007 
+long long gcd(long long u,long long v)
 {
 	if(v==0)
 	return u;
@@ -71,43 +58,80 @@ int gcd(int u,int v)
 	else
 	return gcd(v,u%v);
 }
+// // // #define MAX 1000000
+// int primes[100009],cnt=0;
+// // vector<int> factors[1000009];
+// char str[1000009];
+// void pre()
+// {
+//     // calcualting primes
+//     int n=1000000;
+//     for(int i=2; i*i<=n; i++)
+//         if(str[i]==0)
+//             for(int j=i; j*i<=n; j++)
+//                 str[i*j]=1;
+//     for(int i=2; i<=n; i++)
+//         if(str[i]==0)primes[cnt]=i,cnt++;
+// }
+// #define pb push_back
 int main()
 {
-    int n;
-    cin>>n;
-    long long adj[2001][40]={0LL};
-    string s;
-    int x,y;
-    for(int i=0;i<n;i++)
-    {
-        cin>>s;
-        for(int j =0;j<n;j++)
-        {
-            if(s[j]=='0') continue;
-            x=j/64;
-            y=j%64;
-            adj[i][x] |= (1LL<<y);
-        }
-    }
-    int ans=0;
-    int nn = (n+63)/64;
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            if (i==j) continue;
-            x=j/64;
-            y=j%64;
-            if(adj[i][x] & (1LL<<y)) continue;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t,n;
+    long long ans;
+    int temp;
+    int l,r;
+    vector<int> ods,evs;
+    int arr[100000];
+    int odd,even;
+    cin>>t;
 
-            for(y=0;y<=nn;y++)
-            {
-                if (adj[i][y] & adj[j][y]) break; 
-            }
-            if (y<=nn) ans++;
+    while(t--)
+    {   
+        cin>>n;
+        memset(arr,-1,sizeof(arr));
+        ods.clear();
+        evs.clear();
+        ans=0;
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+            // if(arr[i]%2==0) twos.push_back(i);
         }
+        odd=0;even=0;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]%4==2)
+            {
+                ods.push_back(odd);
+                evs.push_back(even);
+                odd=0;even=0;
+            } else if(arr[i]%4==0)
+            {
+                odd=0;even=0;
+            } else
+            {
+                odd++;
+                even++;
+            }
+        }
+        evs.push_back(even);
+        ans=n*(n+1);
+        ans/=2;
+        for(int i=0;i<ods.size();i++)
+        {
+            ans-=((ods[i]+1)*(evs[i+1]+1));
+        }
+        cout<<ans<<endl;
+
+        // cout<<ans<<endl;
     }
-    cout<<ans<<endl;
+    
+
+
+
+    
  	return 0;
 }
  
