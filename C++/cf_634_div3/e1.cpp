@@ -1,5 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define repn(i,n) for(int i=0;i<n;i++)
+#define pb push_back
+typedef vector<int> vi ;
+typedef vector<long long> vl ;
 // /************************************************************************************************/
 // static struct IO {char tmp[1 << 10];char cur;inline char nextChar()
 // { return cur = getc_unlocked(stdin); }inline char peekChar() { return cur; }
@@ -59,63 +63,75 @@ int gcd(int u,int v)
 	return gcd(v,u%v);
 }
 // // // #define MAX 1000000
-int primes[100009],cnt=0;
-// vector<int> factors[1000009];
-char str[1000009];
-void pre()
-{
-    // calcualting primes
-    int n=1000000;
-    for(int i=2; i*i<=n; i++)
-        if(str[i]==0)
-            for(int j=i; j*i<=n; j++)
-                str[i*j]=1;
-    for(int i=2; i<=n; i++)
-        if(str[i]==0)primes[cnt]=i,cnt++;
-}
+// int primes[100009],cnt=0;
+// // vector<int> factors[1000009];
+// char str[1000009];
+// void pre()
+// {
+//     // calcualting primes
+//     int n=1000000;
+//     for(int i=2; i*i<=n; i++)
+//         if(str[i]==0)
+//             for(int j=i; j*i<=n; j++)
+//                 str[i*j]=1;
+//     for(int i=2; i<=n; i++)
+//         if(str[i]==0)primes[cnt]=i,cnt++;
+// }
 // #define pb push_back
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t,n,temp;
+    int t,n,temp,s;
     cin>>t;
     vector<int> arr;
-    int ans;
-    unordered_map<int,vector<int>> mp;
-    unordered_map<int,vector<int>>:: iterator p,q;
+    vi pos[200];
+    // vector<vi> cnt;
+    // vector<vi> pos;
+    int ans,p,q;
+    // vector<vector<in
+    // unordered_map<int,vector<int>> mp;
+    // unordered_map<int,vector<int>>:: iterator p,q;
 
     while(t--)
     {
-        // sud.clear();
-        arr.clear();
-        mp.clear();
         cin>>n;
-        ans=0;
-        for(int i=0;i<n;i++)
+        int cnt[n+1][200];
+        memset(cnt,0,sizeof(cnt));
+        repn(i,200)
+        {
+            pos[i].clear();
+            // cnt[0][i]
+        }
+        // cnt.clear();
+        // pos.clear();
+        repn(i,n)
         {
             cin>>temp;
             arr.push_back(temp);
-            mp[temp].push_back(i);
+            pos[temp-1].pb(i);
+            repn(j,200) cnt[i+1][j]=cnt[i][j];
+            cnt[i+1][temp-1]++;
         }
-        for(p=mp.begin();p!=mp.end();p++)
+        ans=0;
+        repn(i,200)
         {
-            for(q=++p;q!=mp.end();q++)
-            {
-                // p--;
-
+            s=pos[i].size();
+            ans=max(ans,s);
+            repn(j,s/2)
+            {   
+                p=pos[i][j]+1;
+                q=pos[i][s-j-1]-1;
+                repn(k,200)
+                {
+                    ans=max(ans,((j+1)*2 + cnt[q+1][k]-cnt[p][k]));
+                }
             }
         }
-    
 
+        cout<<ans<<"\n";
         
     }
-    // char ch = 97;
-    // char cb = ch+1;
-    // cout<<cb<<endl;
-
-
-
     
  	return 0;
 }
