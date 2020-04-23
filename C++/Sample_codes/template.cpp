@@ -22,7 +22,10 @@ typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
 typedef pair<ll,ll> pl;
-
+typedef priority_queue<int> pqi;
+typedef priority_queue<ll> pql;
+typedef priority_queue<int,vector<int>,greater<int>> pqig;
+typedef priority_queue<ll,vector<ll>,greater<ll>> pqlg;
 
 int gcd(int u,int v)
 {
