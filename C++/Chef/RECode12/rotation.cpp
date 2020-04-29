@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -66,16 +64,49 @@ int main()
 {
     io
 
-    int t,n,temp,s;
+    int t,n,temp;
     cin>>t;
-    int ans,p,q;
-    
+    int ans,p,q,mx;
+    vi arr,rar;
+    set<int> s;
     while(t--)
     {
         cin>>n;
-    
+        s.clear();
+        arr.clear();
+        mx=0;
+        repn(i,n)
+        {
+            cin>>temp;
+            arr.push_back(temp);
+            s.insert(temp);
+            mx=max(mx,temp);
+        }
+        auto itr=s.begin();
+        ans=0;
+        p=*itr;
+        bool found=true;
+        while(found)
+        {
+            ans++;
+            for(auto i:arr)
+            {
+                if(i==p)
+                {
+                    if(i==mx)
+                    {
+                        found=false;
+                        break;
+                        break;
+                    }else
+                    {
+                        itr++;
+                        p=*itr;
+                    }
+                }else continue;
+            }
+        }
         cout<<ans<<"\n";
-        
     }
     
  	return 0;

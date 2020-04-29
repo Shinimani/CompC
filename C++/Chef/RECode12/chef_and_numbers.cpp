@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -69,12 +67,59 @@ int main()
     int t,n,temp,s;
     cin>>t;
     int ans,p,q;
-    
+    vi arr;
+    map<int,int> m;
+    int mx;
+    int cou,prev;
+    vector<pair<int,int>> vp;
     while(t--)
     {
         cin>>n;
-    
+        arr.clear();
+        m.clear();
+        vp.clear();
+        mx = 0;
+        cou=0;
+
+        repn(i,n)
+        {
+            cin>>temp;
+            arr.pb(temp);
+            if(i==0)
+            {
+                cou=1;
+            }else
+            {
+                if(temp==prev)
+                {
+                    cou++;
+                }
+                else
+                {
+                    m[prev]+=max((cou+1)/2 , 1);
+                    cou=1;
+                }
+            }
+            if(i==n-1) m[temp]+=max((cou+1)/2 , 1);
+            prev=temp;
+        }
+        
+        ans=INT_MAX;
+        for(auto itr = m.begin();itr!=m.end();itr++)
+        {
+            mx=max(itr->second,mx);
+        }
+        for(auto itr = m.begin();itr!=m.end();itr++)
+        {
+            // cout<<itr->first<<" "<<itr->second<<endl;
+            if(itr->second==mx)
+                ans=min(ans,itr->first);
+        }
         cout<<ans<<"\n";
+
+
+    
+        // cout<<ans<<"\n";
         
     }
     

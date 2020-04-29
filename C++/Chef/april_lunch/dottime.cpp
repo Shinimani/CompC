@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -45,7 +43,21 @@ int gcd(int u,int v)
 // 	else
 // 	return gcd(v,u%v);
 // }
-
+// To compute x^y under modulo m 
+ll power(ll x, ll y, ll m) 
+{ 
+    if (y == 0) 
+        return 1; 
+    ll p = power(x, y/2, m) % m; 
+    p = (p * p) % m; 
+  
+    return (y%2 == 0)? p : (x * p) % m; 
+} 
+ll modInverse(ll a, ll m) 
+{ 
+    return power(a, m-2, m); 
+} 
+  
 // // // #define MAX 1000000
 // int primes[100009],cnt=0;
 // // vector<int> factors[1000009];
@@ -61,18 +73,57 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
-
+ll md = 998244353;
+ll dot(ll arr[], ll p,ll q,ll m)
+{
+    ll ans=0;
+    
+        for(ll i=0;i<m;i++)
+        {
+            ans+=arr[p+i]*arr[q+i];
+            ans%=md;
+        }
+    
+    return ans%=md;
+}
 int main()
 {
     io
 
-    int t,n,temp,s;
+    ll t,n,temp,s;
     cin>>t;
-    int ans,p,q;
-    
+    ll ans,p,q;
+    ll m,pos,val;
+    // ll ans;
     while(t--)
     {
-        cin>>n;
+        cin>>n>>m>>q;
+        ll arr[n+1]={0};
+        // repn(i,n)
+        for(int i=1;i<=n;i++)
+        {
+            cin>>arr[i];
+        }
+        cin>>pos>>val;
+        arr[pos]=val;
+        // repn(i,n-m)
+        for(int i=1;i<=n-m+1;i++)
+        {
+            
+            for(int j=i+1;j<=n-m+1;j++)
+            {
+                ans+=dot(arr,i,j,m);
+                ans%=md;
+            }
+        }
+        ans*=2;
+        ans%=md;
+        repn(i,n-m)
+        {
+            ans+=dot(arr,i,i,m);
+            ans%=md;
+        }
+        ans%=md;
     
         cout<<ans<<"\n";
         

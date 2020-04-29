@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -61,7 +59,22 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
-
+bool cont(int l1,int r1,pair<int,int> p1)
+{
+    double l = (double) l1;
+    double r = (double) r1;
+    double x = (double) p1.first;
+    double y = (double) p1.second;
+    double h = (r-l)/2;
+    if(x<l || x>r || y>h)return false;
+    if(x<=(l+r)/2)
+    {
+        return(y<=x-l);
+    }else
+    {
+        return(y<=r-x);
+    }
+}
 int main()
 {
     io
@@ -69,12 +82,35 @@ int main()
     int t,n,temp,s;
     cin>>t;
     int ans,p,q;
-    
+    int x,y;
+    int l,r;
+    vector<pair<int,int>> vp;
+    vector<pair<int,int>>::iterator st,en,itr;
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+        cin>>n>>q;
+        vp.clear();
+        repn(i,n)
+        {
+            cin>>x>>y;
+            vp.push_back(make_pair(x,y));
+        }
+        sort(vp.begin(),vp.end());
+
+        repn(i,q)
+        {
+            cin>>l>>r;
+            ans=0;
+            st=lower_bound(vp.begin(),vp.end(),make_pair(l,0));
+            en=lower_bound(vp.begin(),vp.end(),make_pair(r+1,0));
+            for(itr=st;itr!=en;itr++)
+            {
+                if(cont(l,r,*itr)) ans++;
+            }
+            cout<<ans<<" ";
+        }
+        cout<<"\n";
+        
         
     }
     

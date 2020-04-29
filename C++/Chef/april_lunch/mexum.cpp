@@ -17,9 +17,7 @@ using namespace std;
 #define lbnd        lower_bound
 #define ubnd        upper_bound
 #define bs          binary_search
-#define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
+// #define mp          make_pair
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -69,10 +67,28 @@ int main()
     int t,n,temp,s;
     cin>>t;
     int ans,p,q;
-    
+    map<int,int> mp;
+    map<int,int>::iterator itr;
+    int dist;
     while(t--)
     {
         cin>>n;
+        mp.clear();
+        repn(i,n)
+        {
+            cin>>temp;
+            mp[temp]++;
+        }
+        dist = mp.size();
+        if(mp[1]==0)
+        {
+
+        }
+        for(itr=mp.begin();itr!=mp.end();itr++)
+        {
+
+        }
+        
     
         cout<<ans<<"\n";
         

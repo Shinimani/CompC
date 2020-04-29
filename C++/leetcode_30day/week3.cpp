@@ -119,3 +119,34 @@ int numIslands(vector<vector<char>>& grid) {
     return ans;
 }
 
+int minPathSum(vector<vector<int>>& grid) {
+    int n=grid.size();
+    int m=grid[0].size();
+    vector<vector<int>> dp(n, vector<int> (m,0));
+    for(int i=n-1;i>=0;i--)
+    {
+        if(i==n-1)
+        {
+            for(int j=m-1;j>=0;j--)
+            {
+                if(j==(m-1)) dp[i][j]=0;
+                else dp[i][j]=grid[i][j+1]+dp[i][j+1];   
+            }
+        }else
+        {
+            for(int j=m-1;j>=0;j--)
+            {
+                if(j==(m-1)) dp[i][j]=grid[i+1][j]+dp[i+1][j];
+                else dp[i][j]=min(grid[i+1][j]+dp[i+1][j], grid[i][j+1]+dp[i][j+1]);
+            }
+        }
+    }   
+    return dp[0][0]+grid[0][0];     
+}
+
+int search(vector<int>& arr, int target) {
+    int n=arr.size();
+    if(target==arr[0]) return 0;
+    int pivot=0;
+    for(int b=)
+}

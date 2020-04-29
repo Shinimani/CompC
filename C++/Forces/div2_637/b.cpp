@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -69,12 +67,49 @@ int main()
     int t,n,temp,s;
     cin>>t;
     int ans,p,q;
-    
+    int k;
+    int mx,mxidx,here,idxhere;
+    // vector<bool> b(8);
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+        cin>>n>>k;
+        int arr[n];
+        repn(i,n) cin>>arr[i];
+        int cts[n-k+1];
+        // bool b[n];
+        vector<bool> b(n,false);
+        repn(i,n)
+        {
+            if(i==0||i==n-1) continue;
+            if(arr[i]>arr[i-1] && arr[i]>arr[i+1])b[i]=true;
+        }
+        here=0;mx=0;
+        repn(i,n)
+        {
+            if(i>0 && b[i-1])here++;
+            if(i>=k-1)
+            {
+                if(b[i-k+1])here--;
+                cts[i-k+1]=here;
+            }
+        }
+        mx=0;
+        repn(i,n-k+1)
+        {
+            mx=max(mx,cts[i]);
+        }
+        repn(i,n-k+1)
+        {
+            // mx=max(mx,cts[i]);
+            if(cts[i]==mx){
+                mxidx=i;
+                break;
+            }
+        }
+        mx++;
+        mxidx++;
+        cout<<mx<<" "<<mxidx<<endl;
+        
         
     }
     

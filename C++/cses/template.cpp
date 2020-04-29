@@ -20,6 +20,7 @@ using namespace std;
 #define mp          make_pair
 #define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
 #define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
+
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;

@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -69,12 +67,49 @@ int main()
     int t,n,temp,s;
     cin>>t;
     int ans,p,q;
-    
+    int mindef,minfor;
+    int arr[100];
+    int type[100];
+    bool defe,forw;
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+        cin>>n>>s;
+        memset(arr,-1,sizeof(arr));
+        memset(type,-1,sizeof(type));
+        mindef=INT_MAX;
+        minfor=INT_MAX;
+        defe=forw=false;
+        repn(i,n)
+        {
+            cin>>arr[i];
+        }
+        repn(i,n)
+        {
+            cin>>type[i];
+            if(type[i]==0)
+            {
+                mindef=min(mindef,arr[i]);
+                defe=true;
+            }
+            else
+            {
+                forw=true;
+                minfor=min(minfor,arr[i]);
+            }
+        }
+        if(defe&&forw)
+        {
+            if(s+mindef+minfor<=100)cout<<"yes\n";else cout<<"no\n";
+        }else 
+        {
+            cout<<"no\n";
+        }
+        
+        // pqig def;
+        // pqig forw;
+        // def.clear();
+        // forw.clear();
+
         
     }
     

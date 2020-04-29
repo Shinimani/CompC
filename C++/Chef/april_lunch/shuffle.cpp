@@ -18,8 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
-#define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -66,16 +64,56 @@ int main()
 {
     io
 
-    int t,n,temp,s;
+    int t,n,temp,s,k;
     cin>>t;
-    int ans,p,q;
+    // int ans,p,q;
+    bool ans;
     
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>n>>k;
+        vi arr[k];
+        string str;
+        repn(i,n)
+        {
+            cin>>temp;
+            arr[i%k].push_back(temp);
+        }
+        if(k==1)cout<<"yes\n";
+        else
+        {
+            
+            repn(i,k)
+            {
+                sort(arr[i].begin(),arr[i].end(), greater<int>());
+            }
+            vi fin;
+            int cou=0;
+            for(int i=0;cou<n;i=(i+1)%k)
+            {
+                if(arr[i].empty()) continue;
+                else
+                {
+                    fin.push_back(arr[i].back());
+                    arr[i].pop_back();
+                    cou++;
+                }
+            }
+            ans=true;
+            repn(i,n)
+            {
+                // cout<<fin[i]<<" ";
+                if(i!=0 && fin[i]<fin[i-1])
+                {
+                    ans=false;
+                    break;
+                }
+            }
+            
+            if(k==1||ans)cout<<"yes\n";else cout<<"no\n";   
+            
+            /* code */
+        }
     }
     
  	return 0;
