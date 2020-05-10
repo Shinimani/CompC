@@ -68,17 +68,30 @@ int main()
     io
 
     int t,n;
-    int temp,ans,p,q;
+    int temp,p,q;
     // ll temp,ans,p,q;
     string s;
     cin>>t;
-    
+    vi a;
+    map<int,int> m;
+    bool ans;
     while(t--)
     {
         cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        a.clear();
+        m.clear();
+        ans=true;
+        repn(i,n)
+        {
+            cin>>temp;
+            temp%=n;
+            temp+=2*n;
+            temp%=n;
+            m[(temp+i)%n]++;
+            if(m[(temp+i)%n]>1)ans=false;
+        }
+        // cout<<ans<<"\n";
+        if(ans)cout<<"YES\n";else cout<<"NO\n";
     }
     
  	return 0;

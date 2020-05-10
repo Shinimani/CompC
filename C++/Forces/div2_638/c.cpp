@@ -62,23 +62,85 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
-
+  
 int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
+    int t,n,k;
+    int temp,p,q;
     // ll temp,ans,p,q;
-    string s;
+    string s,ans;
     cin>>t;
-    
+    map<char,int> m;
     while(t--)
     {
-        cin>>n;
-    
+        cin>>n>>k;
+        cin>>s;
+        m.clear();
+        repn(i,n)
+        {
+            m[s[i]]++;
+        }
+        q=k;
+        bool flag=true;
+        ans="";
+        char c='a';
+        while(m[c]==0)c++;
+        if(m[c]<k)
+        {
+            q=k;
+            q-=m[c++];
+            while(m[c]<q) q-=m[c++];
+            ans.pb(c);
+        }else
+        {
+            ans.pb(c);
+            m[c]-=k;
+            // cout<<"heh";
+            while(m[c]==0 && c<='z')c++;
+            // cout<<"heh";
+
+            if(c!='z'+1)
+            {
+            // cout<<"heh";
+
+                char w=c+1;
+                bool rem=false;
+                while(w<='z')
+                {
+                    if(m[w])
+                    {
+                        rem=true;
+                        break;
+                    }
+                    w++;
+                }
+                if(rem)
+                {
+                    while (c<='z')
+                    {
+                        repn(i,m[c])
+                        {
+                            ans.pb(c);
+                        }
+                        c++;
+                    }
+                }else
+                {
+                    while(m[c]>0)
+                    {
+                        ans.pb(c);
+                        m[c]-=k;
+                    }
+                }
+                
+
+            }
+            
+        }
         cout<<ans<<"\n";
-        
+     
     }
     
  	return 0;

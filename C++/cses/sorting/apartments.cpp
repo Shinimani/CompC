@@ -67,19 +67,36 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
+    int t,n,m,k;
+    int temp,ans;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
-    
-    while(t--)
+    cin>>n>>m>>k;
+    vi a(n);
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>a[i];
     }
+    vi b(m);
+    repn(i,m)
+    {
+        cin>>b[i];
+    }
+    sort(all(a));
+    sort(all(b));
+    vector<bool> c(n,false);
+
+    ans=0;
+    int i=0,j=0;
+    while(i<n && j<m)
+    {
+        if(a[i]<b[j]-k)i++;
+        else if(a[i]>b[j]+k)j++;
+        else {
+            i++;j++;ans++;
+        }
+    }
+    cout<<ans<<endl;
     
  	return 0;
 }

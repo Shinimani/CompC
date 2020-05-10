@@ -42,7 +42,6 @@ int gcd(int u,int v)
 // {
 // 	if(v==0)
 // 	return u;
-	
 // 	else
 // 	return gcd(v,u%v);
 // }
@@ -67,8 +66,8 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
+    ll t,n;
+    ll temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
     cin>>t;
@@ -76,9 +75,12 @@ int main()
     while(t--)
     {
         cin>>n;
-    
+        ans = 1<<n;
+        for(int i=1;i<(n/2);i++)
+            ans+=1<<i;
+        for(int i=(n/2);i<n;i++)
+            ans-=1<<i;
         cout<<ans<<"\n";
-        
     }
     
  	return 0;

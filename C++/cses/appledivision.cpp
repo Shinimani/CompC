@@ -18,9 +18,9 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define ret         return
 #define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
 #define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
+
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -62,25 +62,44 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
-
+vector<ll> s;
+vector<ll> arr;
+ll ans=INT_MAX;
+ll sum=0;
+void search(int k,int n)
+{
+    if(k==n)
+    {
+        ll temp=0;
+        for(ll i:s)
+        {
+            temp+=i;
+        }
+        ans=min(ans,abs(sum-2*temp));
+    }else
+    {
+        search(k+1,n);
+        s.push_back(arr[k]);
+        search(k+1,n);
+        s.pop_back();
+    }
+    
+}
 int main()
 {
     io
-
-    int t,n;
-    int temp,ans,p,q;
-    // ll temp,ans,p,q;
-    string s;
-    cin>>t;
-    
-    while(t--)
+    int n;
+    cin>>n;
+    ll k;
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>k;
+        arr.push_back(k);
+        sum+=k;
     }
-    
+    search(0,n);
+    cout<<ans<<endl;
+
  	return 0;
 }
  

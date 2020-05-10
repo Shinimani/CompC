@@ -67,8 +67,10 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
+    ll t,n;
+    ll temp,ans;
+    ll h;
+    double p,q;
     // ll temp,ans,p,q;
     string s;
     cin>>t;
@@ -76,7 +78,18 @@ int main()
     while(t--)
     {
         cin>>n;
-    
+        ans=0;
+        while(n>1)
+        {
+            p=(double)n;
+            p=24*p +1;
+            p=sqrt(p);
+            p--;
+            p/=6;
+            h=(ll)p;
+            n-=((h*(3*h+1))/2);
+            ans++;
+        }
         cout<<ans<<"\n";
         
     }

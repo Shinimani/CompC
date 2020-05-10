@@ -71,15 +71,16 @@ int main()
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
-    
-    while(t--)
+    cin>>n;
+    int arr[n];
+    set<int> m;
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>temp;
+        m.insert(temp);
     }
+    cout<<m.size();
+
     
  	return 0;
 }

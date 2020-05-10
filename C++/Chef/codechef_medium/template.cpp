@@ -67,11 +67,9 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
-    // ll temp,ans,p,q;
-    string s;
+    int t,n,temp,s;
     cin>>t;
+    int ans,p,q;
     
     while(t--)
     {

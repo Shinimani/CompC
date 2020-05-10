@@ -67,17 +67,49 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
-    // ll temp,ans,p,q;
-    string s;
+    int t,n,temp,s;
     cin>>t;
-    
+    int ans,p,q;
+    int arr[9];
+    bool b[9];
+    int best,worst;
+    bool one,cont,allcover;
+    int minc,maxc;
     while(t--)
     {
         cin>>n;
-    
-        cout<<ans<<"\n";
+        // repn(i,n)
+        for(int i=1;i<=n;i++)
+        {
+            cin>>arr[i];
+        }
+        memset(b,false,sizeof(b));
+        one=false;cont=false,allcover=true;
+        minc=INT_MAX;
+        maxc=1;
+        for(int i=1;i<n;i++)
+        {
+            if(arr[i+1]-arr[i] <=2) b[i]=true;
+        }
+        temp=1;
+        for(int i=1;i<n;i++)
+        {
+            if(b[i])
+            {
+                temp++;
+                maxc=max(maxc,temp);
+            }
+            else
+            {
+                allcover=false;
+                minc=min(minc,temp);
+                temp=1;
+                if(i!=1 && !b[i-1]) minc=1;
+            }
+        }
+        minc=min(minc,temp);
+        if(allcover) cout<<n<<" "<<n<<endl;
+        else cout<<minc<<" "<<maxc<<endl;
         
     }
     

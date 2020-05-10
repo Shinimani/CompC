@@ -62,7 +62,52 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
+int longestArithSeqLength(vector<int>& a) {
+    // sort(all(a));
+    int n=a.size();
+    vector<vi> dp(n,vi (n,2));
+    int i,k;
+    int ans=2;
+    // repn(i,n)
+    // {
+    //     repn(j,n)
+    //     {
+    //         // dp[i][j]=2;
+    //         cout<<dp[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+    //     cout<<endl;
 
+    for(int j=n-2;j>=1;j--)
+    {
+        for(int i=j-1;i>=0;i--)
+        {
+            int k=j+1;
+            while(k<n)
+            {
+                if(a[i]+a[k]==2*a[j])
+                {
+                    dp[i][j]=dp[j][k]+1;
+                    ans=max(ans,dp[i][j]);
+                    break;
+                }
+                k++;
+            }
+        }
+    }
+
+    repn(i,n)
+    {
+        repn(j,n)
+        {
+            cout<<dp[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return ans;
+
+}
 int main()
 {
     io
@@ -71,15 +116,23 @@ int main()
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
+    // cin>>t;
+    vi a = {0,8,45,88,48,68,28,55,17,24};
+    // sort(all(a));
+    repn(i,a.size())cout<<a[i]<<" ";
+    cout<<endl;
+    // for(int i=1;i<=4;i++)
+    // {
+    //     a.pb(3*i);
+    // }
+    cout<<longestArithSeqLength(a);
+    // while(t--)
+    // {
+    //     cin>>n;
     
-    while(t--)
-    {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+    //     cout<<ans<<"\n";
         
-    }
+    // }
     
  	return 0;
 }

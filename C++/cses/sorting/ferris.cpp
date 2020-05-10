@@ -67,20 +67,29 @@ int main()
 {
     io
 
-    int t,n;
+    int t,n,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
-    
-    while(t--)
+    cin>>n>>x;
+    int arr[n];
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>arr[i];
     }
-    
+    sort(arr,arr+n);
+    int i=0,j=n-1;
+    ans=0;
+    while(i<=j)
+    {
+        if(arr[i]+arr[j]<=x)
+        {
+            i++;j--;
+        }else j--;
+        ans++;
+    }
+    cout<<ans;
+
  	return 0;
 }
  

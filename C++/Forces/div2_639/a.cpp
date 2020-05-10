@@ -67,7 +67,7 @@ int main()
 {
     io
 
-    int t,n;
+    int t,n,m;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
@@ -75,10 +75,12 @@ int main()
     
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>n>>m;
+        if(min(n,m)>2)cout<<"NO\n";
+        else if(min(n,m)==2)
+        {
+            if(n==m) cout<<"YES\n";else cout<<"NO\n";
+        } else cout<<"YES\n";
     }
     
  	return 0;

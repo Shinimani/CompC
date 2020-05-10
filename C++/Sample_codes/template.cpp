@@ -18,6 +18,7 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
+#define ret         return
 #define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
 #define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
@@ -66,9 +67,11 @@ int main()
 {
     io
 
-    int t,n,temp,s;
+    int t,n;
+    int temp,ans,p,q;
+    // ll temp,ans,p,q;
+    string s;
     cin>>t;
-    int ans,p,q;
     
     while(t--)
     {

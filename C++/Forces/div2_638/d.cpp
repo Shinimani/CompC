@@ -67,8 +67,8 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
+    ll t,n;
+    ll temp,ans,p,q,r;
     // ll temp,ans,p,q;
     string s;
     cin>>t;
@@ -76,8 +76,46 @@ int main()
     while(t--)
     {
         cin>>n;
-    
-        cout<<ans<<"\n";
+        double d =n+1;
+        d/=3;
+        d=log2(d);
+        ll k=(ll)d;
+        q=k;
+        k=1<<k;
+        p=2*k-1;
+        if(n-p==0)
+        {
+            cout<<q<<"\n";
+            repn(i,q)
+                cout<<(1<<i)<<" ";
+            cout<<endl;
+            
+        }else if(n-p==1)
+        {
+            // cout<<
+        } else if ((n-p)>2*k)
+        {
+            // q++;
+            n-=k;
+            n-=p;
+            r=n-k;
+            cout<<q+2<<"\n";
+            repn(i,q)
+                cout<<(1<<i)<<" ";
+            cout<<"0 ";
+            cout<<r<<"\n";
+        }else
+        {
+            n-=p;
+            r=n-k;
+            cout<<q+1<<endl;
+            repn(i,q)
+                cout<<(1<<i)<<" ";
+            // cout<<"0 ";
+            cout<<r<<"\n";
+        }
+        
+
         
     }
     

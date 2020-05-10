@@ -67,17 +67,49 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
+    int t,n,k;
+    int temp,p,q;
     // ll temp,ans,p,q;
-    string s;
+    // string s;
     cin>>t;
-    
+    set<int> s;
+    vi a,ans,b;
     while(t--)
     {
-        cin>>n;
+        cin>>n>>k;
+        p=0;
+        s.clear();
+        a.clear();
+        ans.clear();
+        b.clear();
+        repn(i,n)
+        {
+            cin>>temp;
+            s.insert(temp);
+        }
+        if(s.size()>k)cout<<"-1\n";
+        else
+        {
+            for(int i=1;i<=n &&s.size()<k;i++)
+            {
+                if(s.count(i))continue;
+                else s.insert(i);
+            }
+            
+            for(auto it=s.begin();it!=s.end();it++)
+            {
+                a.pb(*it);
+            }
+            cout<<n*k<<endl;
+            repn(i,n*k)
+            {
+                cout<<a[i%k]<<" ";
+            }
+            cout<<endl;
+            
+        }
+        
     
-        cout<<ans<<"\n";
         
     }
     

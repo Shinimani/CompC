@@ -18,9 +18,10 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define ret         return
 #define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
 #define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
+
+
 typedef vector<int> vi ;
 typedef vector<long long> vl ;
 typedef pair<int,int> pi;
@@ -62,24 +63,52 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
+int canJump(vector<int> &A) {
+    int n=A.size();
+    bool fin[n];
+    memset(fin,false,sizeof(fin));
+    fin[n-1]=true;
+    int k;
+    for(int i=n-2;i>=0;i--)
+    {
+        k=A[i];
+        for(int j=1;j<=k && i+j<n;j++)
+        {
+            if(fin[i+j])
+            {
+                fin[i]=true;
+                break;
+            }
+        }
+    }
+    if (fin[0]) return 1;else return 0;
+
+    
+}
 
 int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
-    // ll temp,ans,p,q;
-    string s;
-    cin>>t;
+    // int t,n,temp,s;
+    // cin>>t;
+    // int ans,p,q;
     
-    while(t--)
-    {
-        cin>>n;
+    // while(t--)
+    // {
+    //     cin>>n;
     
-        cout<<ans<<"\n";
+    //     cout<<ans<<"\n";
         
-    }
+    // }
+    vi a;
+    a.pb(10);
+    a.pb(0);
+    a.pb(1);
+    a.pb(1);
+    a.pb(0);
+    cout<<canJump(a);
+
     
  	return 0;
 }

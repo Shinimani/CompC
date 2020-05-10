@@ -72,12 +72,14 @@ int main()
     // ll temp,ans,p,q;
     string s;
     cin>>t;
+    ll x,y,l,r;
     
     while(t--)
     {
-        cin>>n;
+        cin>>x>>y>>l>>r;
+        cout<<(x|y)<<endl;
     
-        cout<<ans<<"\n";
+        // cout<<ans<<"\n";
         
     }
     

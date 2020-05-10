@@ -144,9 +144,9 @@ int minPathSum(vector<vector<int>>& grid) {
     return dp[0][0]+grid[0][0];     
 }
 
-int search(vector<int>& arr, int target) {
-    int n=arr.size();
-    if(target==arr[0]) return 0;
-    int pivot=0;
-    for(int b=)
-}
+// int search(vector<int>& arr, int target) {
+//     int n=arr.size();
+//     if(target==arr[0]) return 0;
+//     int pivot=0;
+//     for(int b=)
+// }

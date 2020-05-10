@@ -18,7 +18,6 @@ using namespace std;
 #define ubnd        upper_bound
 #define bs          binary_search
 #define mp          make_pair
-#define ret         return
 #define repnitr(itr,m) for(auto itr=m.begin();itr!=m.end();itr++)
 #define repnrevitr(itr,m) for(auto itr=m.rbegin();itr!=m.rend();itr++)
 typedef vector<int> vi ;
@@ -67,17 +66,36 @@ int main()
 {
     io
 
-    int t,n;
-    int temp,ans,p,q;
-    // ll temp,ans,p,q;
-    string s;
+    ll t,n,temp,s,k;
     cin>>t;
-    
+    // vi arr;
+    ll costs[10],weights[10];
+    ll tempcost,tempwt,maxwt;
+
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+        maxwt=0;
+        cin>>n>>k;
+        repn(i,n)
+        {
+            cin>>costs[i]>>weights[i];
+        }
+        repn(i,1<<n)
+        {
+            tempcost=0;tempwt=0;
+            repn(j,n)
+            {
+                if(i&1<<j)
+                {
+                    tempcost+=costs[j];
+                    tempwt+=weights[j];
+                    if(tempcost>k)break;
+                }
+                if(tempcost<=k)maxwt=max(maxwt,tempwt);
+            }
+        }
+        cout<<maxwt<<endl;
+
         
     }
     
