@@ -46,23 +46,7 @@ int gcd(int u,int v)
 // 	else
 // 	return gcd(v,u%v);
 // }
-
-// // // #define MAX 1000000
-// int primes[100009],cnt=0;
-// // vector<int> factors[1000009];
-// char str[1000009];
-// void pre()
-// {
-//     // calcualting primes
-//     int n=1000000;
-//     for(int i=2; i*i<=n; i++)
-//         if(str[i]==0)
-//             for(int j=i; j*i<=n; j++)
-//                 str[i*j]=1;
-//     for(int i=2; i<=n; i++)
-//         if(str[i]==0)primes[cnt]=i,cnt++;
-// }
-
+/*
 int main()
 {
     io
@@ -71,16 +55,54 @@ int main()
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
-    
-    while(t--)
+    cin>>n;
+    int a[n];
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+        cin>>a[i];
+    }
+    temp=ans=0;
+    unordered_map<int,int> m;
+    repn(i,n)
+    {
+        if(m.find(a[i])==m.end())
+        {
+            m[a[i]]=i;
+            temp++;
+        }else
+        {
+            temp=i-m[a[i]];
+            m[a[i]]=i;
+        }
+        ans=max(temp,ans);
         
     }
+    cout<<ans;
     
  	return 0;
 }
- 
+ */
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  int n;
+  cin >> n;
+  vector<int> a(n);
+  for (int i = 0; i < n; i++) cin >> a[i];
+  int i = 0;
+  int j = 0;
+  int m = 1;
+  set<int> s;
+  while (j < n) {
+    if (s.count(a[j])) {
+      m = max(m, j - i);
+      while (a[i] != a[j]) {
+        s.erase(a[i++]);
+      }
+      i++;
+    } else s.insert(a[j]);
+    j++;
+  }
+  m = max(m, j - i);
+  cout << m << endl;
+}

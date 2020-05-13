@@ -47,35 +47,19 @@ int gcd(int u,int v)
 // 	return gcd(v,u%v);
 // }
 
-// // // #define MAX 1000000
-// int primes[100009],cnt=0;
-// // vector<int> factors[1000009];
-// char str[1000009];
-// void pre()
-// {
-//     // calcualting primes
-//     int n=1000000;
-//     for(int i=2; i*i<=n; i++)
-//         if(str[i]==0)
-//             for(int j=i; j*i<=n; j++)
-//                 str[i*j]=1;
-//     for(int i=2; i<=n; i++)
-//         if(str[i]==0)primes[cnt]=i,cnt++;
-// }
-
 int main()
 {
     io
 
-    int t,n;
+    int t,n,k,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
     cin>>n;
-    int arr[n];
+    int a[n];
     repn(i,n)
     {
-        cin>>arr[i];
+        cin>>a[i];
     }
     
  	return 0;

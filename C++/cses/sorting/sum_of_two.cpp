@@ -67,19 +67,51 @@ int main()
 {
     io
 
-    int t,n,k,x;
+    int t,n,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
-    string s;
-    cin>>t;
-    
-    while(t--)
+    int s;
+    cin>>n>>x;
+    vector<pi> a(n);
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>temp;
+        a[i]=mp(temp,i+1);
     }
+
+    sort(all(a));
+    if(n==1)
+    {
+        cout<<"IMPOSSIBLE";
+    }else if(n==2)
+    {
+        if(a[0].F + a[1].F == x)
+        {
+            cout<<"1 2";
+        }else cout<<"IMPOSSIBLE";
+    }else
+    {
+        /* code */
+    bool f=false;
+    p=0;
+    // repn(i,n/2+1)
+    for(auto it = a.begin();it!=a.end();it++)
+    {
+        int i=it-a.begin();
+        s=lbnd(it+1,a.end(),mp(x-a[i].F,0))-a.begin();
+        if(a[s].F==x-a[i].F)
+        {
+            p=a[i].S;
+            q=a[s].S;
+            break;
+        }
+    }
+    if(p)cout<<p<<' '<<q;
+    else cout<<"IMPOSSIBLE";
+    }
+    
+
+
     
  	return 0;
 }

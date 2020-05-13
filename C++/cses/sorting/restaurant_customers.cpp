@@ -67,19 +67,31 @@ int main()
 {
     io
 
-    int t,n,k,x;
+    int t,n;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
-    
-    while(t--)
+    cin>>n;
+    // int arr[n];
+    vi b(n);
+    vi e(n);
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>b[i]>>e[i];
     }
+    sort(all(b));
+    sort(all(e));
+    ans=1;
+    repn(i,n)
+    {
+        if(i==0)continue;
+        p=i+1;
+        // auto it=lbnd(all(e),b[i]);
+        q=lbnd(all(e),b[i])-e.begin();
+        // q--;
+        ans=max(ans,p-q);
+    }
+    cout<<ans;
     
  	return 0;
 }

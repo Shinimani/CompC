@@ -67,20 +67,35 @@ int main()
 {
     io
 
-    int t,n,k,x;
+    int t,n;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
-    cin>>t;
-    
-    while(t--)
+    cin>>n;
+    // int arr[n];
+    // vi b(n);
+    // vi e(n);
+    vector<pi> v;
+    repn(i,n)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>p>>q;
+        v.push_back(mp(q,p));
     }
-    
+    sort(all(v));
+    ans=0;
+    repn(i,n)
+    {
+        if(i==0)
+        {
+            p=v[i].F;
+            ans++;
+        }else if(v[i].S>=p)
+        {
+            p=v[i].F;
+            ans++;
+        }
+    }
+    cout<<ans;
  	return 0;
 }
  

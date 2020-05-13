@@ -46,38 +46,35 @@ int gcd(int u,int v)
 // 	else
 // 	return gcd(v,u%v);
 // }
-
-// // // #define MAX 1000000
-// int primes[100009],cnt=0;
-// // vector<int> factors[1000009];
-// char str[1000009];
-// void pre()
-// {
-//     // calcualting primes
-//     int n=1000000;
-//     for(int i=2; i*i<=n; i++)
-//         if(str[i]==0)
-//             for(int j=i; j*i<=n; j++)
-//                 str[i*j]=1;
-//     for(int i=2; i<=n; i++)
-//         if(str[i]==0)primes[cnt]=i,cnt++;
-// }
-
+bool sortinrev(const pair<int,int> &a,  
+               const pair<int,int> &b) 
+{ 
+       return (a.first > b.first); 
+}
 int main()
 {
     io
 
-    int t,n;
+    int t,n,k,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
     string s;
     cin>>n;
-    int arr[n];
+    multiset<int> m;
     repn(i,n)
     {
-        cin>>arr[i];
+        cin>>x;
+        auto it = m.lower_bound(x+1);
+        if(it==m.end())m.insert(x);
+        else
+        {
+            m.erase(it);
+            m.insert(x);
+        }
     }
-    
+    cout<<m.size();
  	return 0;
 }
  
+// 10
+// 10 4 5 9 4 10 2 7 4 6
