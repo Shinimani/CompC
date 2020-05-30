@@ -51,6 +51,72 @@ static auto speedup = []() {
     cout.tie(nullptr);
     return nullptr;
 }();
+
+class Trie {
+
+public:
+    Trie* t[27];
+    /** Initialize your data structure here. */
+    Trie() {
+        for(int i=0;i<27;i++)
+        {
+            this->t[i]=nullptr;
+        }
+    }
+    
+    /** Inserts a word into the trie. */
+    void insert(string word) {
+        Trie* p = this;
+        for(char c:word)
+        {
+            if(p->t[c-'a']!=nullptr)
+            {
+                p=p->t[c-'a'];
+                continue;
+            }else
+            {
+                p->t[c-'a']=new Trie();
+                p=p->t[c-'a'];
+            }
+        }
+        p->t[26]=new Trie();
+    }
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        Trie* p = this;
+        for(char c:word)
+        {
+            if(p->t[c-'a'] !=nullptr)
+            {
+                p=p->t[c-'a'];
+            }else return false;
+        }
+        if(p->t[26] !=nullptr)return true;else return false;
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string prefix) {
+        Trie* p = this;
+        for(char c:prefix)
+        {
+            if(p->t[c-'a'] !=nullptr)
+            {
+                p=p->t[c-'a'];
+            }else return false;
+        }
+        return true;
+    }
+};
+
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie* obj = new Trie();
+ * obj->insert(word);
+ * bool param_2 = obj->search(word);
+ * bool param_3 = obj->startsWith(prefix);
+ */
+
 // 1432219
 string removeKdigits(string s, int k) {
     int n=s.length();
