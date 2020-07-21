@@ -116,16 +116,19 @@ int main()
                     {
                         f=false;
                         break;
+                    }else if(sa[i]!=c)
+                    {
+                        sa[i]=c;
+                        v.insert(i);
                     }
-                    sa[i]=c;
-                    v.insert(i);
                 }
                 if(!f)
                     break;
                 else
                 {
-                    v.insert(a[c][0]);
-                    ans.pb(v);
+                    if(!v.empty())
+                    {v.insert(a[c][0]);
+                    ans.pb(v);}
                 }
             }
             if(!f)

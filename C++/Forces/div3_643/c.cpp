@@ -62,6 +62,28 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
+bool helper_fun(vi &a,int i, int j)
+{
+    if(i<0) return false;
+    int prev = min(a[i],a[j]);
+    int temp;
+    while(i<j)
+    {
+        // cout<<a[i]<<" "<<a[j]<<endl;
+        temp = min(a[i],a[j]);
+        if(temp<prev) return false;
+        if(a[i]<a[j])
+        {
+            prev = a[i];
+            i++;
+        }else
+        {
+            prev=a[j];
+            j--;
+        }
+    }
+    return true;
+}
 
 int main()
 {
@@ -70,86 +92,46 @@ int main()
     int t,n,k,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
-    string sa,sb;
-    set<int> a,b;
+    string s;
     cin>>t;
-    
+    vi a;
+
+    // vi c;
+    // c.pb(1);
+    // c.pb(2);
+    // c.pb(3);
+    // c.pb(4);
+    // cout<<helper_fun(c,0,3);
+
+
     while(t--)
     {
         cin>>n;
-        cin>>sa;
-        cin>>sb;
         a.clear();
-        b.clear();
-        bool f=true;
-        p=-1;
-        q=-1;
         repn(i,n)
         {
-            if(sa[i]=='a'&&p!=-2)p=i;
-            if(sa[i]=='b'&&q!=-2)q=i;
-
-            if(sb[i]=='a')
-            {
-                a.insert(i);
-                if(sa[i]=='a') p=-2;
-            }
-            else 
-            {
-                if(sa[i]<sb[i])
-                {
-                    f=false;
-                    break;
-                }
-                b.insert(i);
-                if(sa[i]=='b')q=-2;
-            }
+            cin>>temp;
+            a.pb(temp);
         }
-        if(!f)
+        int dir = -1;
+        int prev = a[n-1];
+        int i=n-2;
+        for(i=n-2;i>=0;i--)
         {
-            cout<<"-1\n";
-        }else
-        {
-            if(a.empty() && (p!=-1 || q==-1))
+            if(dir<0)
             {
-                cout<<"-1\n";
-            }else if(b.empty() && p==-1)
-            {
-                cout<<"-1\n";
+                if(a[i]<prev)
+                    dir=1;
             }else
             {
-                if(a.empty() || b.empty())
+                if(a[i]>prev)
                 {
-                    cout<<"1\n";
-                    repn(i,n)
-                    {
-                        cout<<i<<" ";
-                    }
-                    cout<<endl;
-                }else
-                {
-
-                    if(p!=-2)a.insert(p);
-                    if(q!=-2)b.insert(q);
-                    cout<<"2\n";
-                    cout<<b.size()<<" ";
-                    for(int i:b)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    cout<<a.size()<<" ";
-                    for(int i:a)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    /* code */
+                    break;
                 }
-                
             }
-            
+            prev=a[i];
         }
-        
-
+        cout<<i+1<<endl;
         
     }
     

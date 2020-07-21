@@ -70,86 +70,14 @@ int main()
     int t,n,k,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
-    string sa,sb;
-    set<int> a,b;
+    string s;
     cin>>t;
     
     while(t--)
     {
         cin>>n;
-        cin>>sa;
-        cin>>sb;
-        a.clear();
-        b.clear();
-        bool f=true;
-        p=-1;
-        q=-1;
-        repn(i,n)
-        {
-            if(sa[i]=='a'&&p!=-2)p=i;
-            if(sa[i]=='b'&&q!=-2)q=i;
-
-            if(sb[i]=='a')
-            {
-                a.insert(i);
-                if(sa[i]=='a') p=-2;
-            }
-            else 
-            {
-                if(sa[i]<sb[i])
-                {
-                    f=false;
-                    break;
-                }
-                b.insert(i);
-                if(sa[i]=='b')q=-2;
-            }
-        }
-        if(!f)
-        {
-            cout<<"-1\n";
-        }else
-        {
-            if(a.empty() && (p!=-1 || q==-1))
-            {
-                cout<<"-1\n";
-            }else if(b.empty() && p==-1)
-            {
-                cout<<"-1\n";
-            }else
-            {
-                if(a.empty() || b.empty())
-                {
-                    cout<<"1\n";
-                    repn(i,n)
-                    {
-                        cout<<i<<" ";
-                    }
-                    cout<<endl;
-                }else
-                {
-
-                    if(p!=-2)a.insert(p);
-                    if(q!=-2)b.insert(q);
-                    cout<<"2\n";
-                    cout<<b.size()<<" ";
-                    for(int i:b)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    cout<<a.size()<<" ";
-                    for(int i:a)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    /* code */
-                }
-                
-            }
-            
-        }
-        
-
+    
+        cout<<ans<<"\n";
         
     }
     

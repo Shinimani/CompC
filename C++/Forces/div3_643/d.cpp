@@ -70,86 +70,85 @@ int main()
     int t,n,k,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
-    string sa,sb;
-    set<int> a,b;
+    string s;
     cin>>t;
     
     while(t--)
     {
         cin>>n;
-        cin>>sa;
-        cin>>sb;
-        a.clear();
-        b.clear();
-        bool f=true;
-        p=-1;
-        q=-1;
-        repn(i,n)
+        cin>>s;
+        int i=0;
+        char c = 'a';
+        ans=0;
+        int len = n/2;
+        int lc[26];
+        int rc[26];
+        while(len>0)
         {
-            if(sa[i]=='a'&&p!=-2)p=i;
-            if(sa[i]=='b'&&q!=-2)q=i;
-
-            if(sb[i]=='a')
+            memset(lc,0,sizeof(lc));
+            memset(rc,0,sizeof(rc));
+            
+            // cout<<i<<" "<<len<<" "<<c<<endl;
+            for(int j=0;j<len;j++)
             {
-                a.insert(i);
-                if(sa[i]=='a') p=-2;
-            }
-            else 
-            {
-                if(sa[i]<sb[i])
+                for(char cc = c;cc<='z';cc++)
                 {
-                    f=false;
-                    break;
-                }
-                b.insert(i);
-                if(sa[i]=='b')q=-2;
-            }
-        }
-        if(!f)
-        {
-            cout<<"-1\n";
-        }else
-        {
-            if(a.empty() && (p!=-1 || q==-1))
-            {
-                cout<<"-1\n";
-            }else if(b.empty() && p==-1)
-            {
-                cout<<"-1\n";
-            }else
-            {
-                if(a.empty() || b.empty())
-                {
-                    cout<<"1\n";
-                    repn(i,n)
-                    {
-                        cout<<i<<" ";
-                    }
-                    cout<<endl;
-                }else
-                {
-
-                    if(p!=-2)a.insert(p);
-                    if(q!=-2)b.insert(q);
-                    cout<<"2\n";
-                    cout<<b.size()<<" ";
-                    for(int i:b)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    cout<<a.size()<<" ";
-                    for(int i:a)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    /* code */
+                    if(s[i+j]==cc)lc[cc-'a']++;
+                    if(s[i+len+j]==cc)rc[cc-'a']++;
                 }
                 
             }
+            // for(int i=0;i<26;i++)
+            // {
+            //     cout<<lc[i]<<" "<<rc[i]<<endl;
+            // }
+            // cout<<endl;
+            if(lc[c-'a']==len && rc[c-'a']==len)
+                {
+                    break;
+                }
+            else
+            {
+                if(lc[c-'a']>rc[c-'a'])
+                {
+                    ans+=len-lc[c-'a'];
+                    i+=len;
+                    
+                }else if (rc[c-'a']>lc[c-'a'])
+                {
+                    ans+=len-rc[c-'a'];
+                    
+                }else
+                {
+                    ans+=len-lc[c-'a'];
+                    if(len==1)
+                    {
+                        ans+=len-lc[c-'a'];
+                    }
+                    else
+                    {
+                        char d=c;
+                        // d++;
+                        while(d<='z' && lc[d-'a']==rc[d-'a'])
+                            d++;
+                        if( d>'z')
+                        {
+                            continue;
+                        }else
+                        {
+                            if(lc[d-'a']<rc[d-'a'])
+                                i+=len;
+                        }
+                    } 
+                }
+            }
+            c++;
+            len/=2;
             
-        }
-        
+            // cout<<ans<<endl;
 
+        }
+        cout<<ans<<endl;
         
     }
     

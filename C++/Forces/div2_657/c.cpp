@@ -67,90 +67,48 @@ int main()
 {
     io
 
-    int t,n,k,x;
-    int temp,ans,p,q;
+    ll t,n,k,x,m;
+    ll temp,ans;
     // ll temp,ans,p,q;
-    string sa,sb;
-    set<int> a,b;
+    string s;
     cin>>t;
-    
+    bool ar[100000];
     while(t--)
     {
-        cin>>n;
-        cin>>sa;
-        cin>>sb;
-        a.clear();
-        b.clear();
-        bool f=true;
-        p=-1;
-        q=-1;
-        repn(i,n)
+        cin>>n>>m;
+        memset(ar,false,sizeof(ar));
+        vector<pl> v;
+        priority_queue<pl> pq;
+        repn(i,m)
         {
-            if(sa[i]=='a'&&p!=-2)p=i;
-            if(sa[i]=='b'&&q!=-2)q=i;
-
-            if(sb[i]=='a')
+            ll a,b;
+            cin>>a>>b;
+            v.pb(mp(a,b));
+            pq.push(mp(a,i));
+        }
+        ans=0;
+        cout<<endl;
+        
+        while(m>0)
+        {
+            pl temp_pair = pq.top();
+            cout<<temp_pair.first<<" "<<temp_pair.second<<endl;
+            if(ar[temp_pair.second])
             {
-                a.insert(i);
-                if(sa[i]=='a') p=-2;
+                ans+= m*temp_pair.first;
+                m=0;
+                break;
             }
-            else 
+            else
             {
-                if(sa[i]<sb[i])
-                {
-                    f=false;
-                    break;
-                }
-                b.insert(i);
-                if(sa[i]=='b')q=-2;
+                ans+= temp_pair.first;
+                m--;
+                ar[temp_pair.second]=true;
+                pq.pop();
+                pq.push(mp(v[temp_pair.second].second,temp_pair.second));
             }
         }
-        if(!f)
-        {
-            cout<<"-1\n";
-        }else
-        {
-            if(a.empty() && (p!=-1 || q==-1))
-            {
-                cout<<"-1\n";
-            }else if(b.empty() && p==-1)
-            {
-                cout<<"-1\n";
-            }else
-            {
-                if(a.empty() || b.empty())
-                {
-                    cout<<"1\n";
-                    repn(i,n)
-                    {
-                        cout<<i<<" ";
-                    }
-                    cout<<endl;
-                }else
-                {
-
-                    if(p!=-2)a.insert(p);
-                    if(q!=-2)b.insert(q);
-                    cout<<"2\n";
-                    cout<<b.size()<<" ";
-                    for(int i:b)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    cout<<a.size()<<" ";
-                    for(int i:a)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    /* code */
-                }
-                
-            }
-            
-        }
-        
-
-        
+        cout<<ans<<endl;
     }
     
  	return 0;

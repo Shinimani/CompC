@@ -70,86 +70,106 @@ int main()
     int t,n,k,x;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
-    string sa,sb;
-    set<int> a,b;
+    string s;
     cin>>t;
-    
+    string c = "abacaba";
+    vi a,b;
     while(t--)
     {
         cin>>n;
-        cin>>sa;
-        cin>>sb;
+        cin>>s;
         a.clear();
         b.clear();
-        bool f=true;
-        p=-1;
-        q=-1;
-        repn(i,n)
+        for(int i=0;i+6<n;i++)
         {
-            if(sa[i]=='a'&&p!=-2)p=i;
-            if(sa[i]=='b'&&q!=-2)q=i;
-
-            if(sb[i]=='a')
+            int j=0;
+            bool f=true;
+            for(j=0;j<7;j++)
             {
-                a.insert(i);
-                if(sa[i]=='a') p=-2;
+                if(s[i+j]=='?' || s[i+j]==c[j])
+                    {
+                        if(s[i+j]=='?')
+                            f=false;
+                        continue;
+                    }
+                else break;
             }
-            else 
+            if(j==7)
             {
-                if(sa[i]<sb[i])
+                if(!f)
+                    a.pb(i);
+                else
                 {
-                    f=false;
-                    break;
+                    b.pb(i);
                 }
-                b.insert(i);
-                if(sa[i]=='b')q=-2;
             }
         }
-        if(!f)
+        // cout<<a.size()<<" "<<b.size()<<endl;
+        if(b.size()>1 || (a.empty() && b.empty()))
+            cout<<"NO\n";
+        else
         {
-            cout<<"-1\n";
-        }else
-        {
-            if(a.empty() && (p!=-1 || q==-1))
+            if(b.size()==1)
             {
-                cout<<"-1\n";
-            }else if(b.empty() && p==-1)
+                cout<<"YES\n";
+                repn(i,n)
+                {
+                    if(s[i]=='?')
+                        s[i]='z';
+                }
+                cout<<s<<endl;
+            }else if (a.size()==1)
             {
-                cout<<"-1\n";
+                for(int j=0;j<7;j++)
+                {
+                    s[a[0]+j]=c[j];
+                }
+                repn(i,n)
+                {
+                    if(s[i]=='?')
+                        s[i]='z';
+                }
+                cout<<"YES\n";
+                cout<<s<<endl;
             }else
             {
-                if(a.empty() || b.empty())
+                string ss = s;
+                bool yes = true;
+                for(int i=0;i<a.size() && yes;i++)
                 {
-                    cout<<"1\n";
-                    repn(i,n)
+                    for(int j=0;j<7;j++)
                     {
-                        cout<<i<<" ";
+                        ss[a[i]+j]=c[j];
                     }
-                    cout<<endl;
-                }else
-                {
-
-                    if(p!=-2)a.insert(p);
-                    if(q!=-2)b.insert(q);
-                    cout<<"2\n";
-                    cout<<b.size()<<" ";
-                    for(int i:b)
+                    int k=0;
+                    for(k=0;k<a.size();k++)
                     {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    cout<<a.size()<<" ";
-                    for(int i:a)
+                        if(k==i || abs(a[i]-a[k])>7) continue;
+                        bool flag = true;
+                        for(int j=0;j<7 && flag;j++)
+                        {
+                            flag = ss[a[k]+j]==c[j];
+                        }
+                        if(flag)
+                            break;
+                    }
+                    if(k==a.size())
                     {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    /* code */
+                        cout<<"YES\n";
+                        yes=false;
+                        repn(j,n)
+                        {
+                            if(ss[j]=='?')
+                                ss[j]='z';
+                        }
+                        cout<<ss<<endl;
+                    }
                 }
-                
+                if(yes)
+                    cout<<"NO\n";
             }
             
         }
-        
-
         
     }
     

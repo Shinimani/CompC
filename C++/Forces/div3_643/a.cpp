@@ -67,90 +67,41 @@ int main()
 {
     io
 
-    int t,n,k,x;
+    int t,n,k,x,y,z,a,b,c;
     int temp,ans,p,q;
     // ll temp,ans,p,q;
-    string sa,sb;
-    set<int> a,b;
+    string s;
     cin>>t;
     
     while(t--)
     {
-        cin>>n;
-        cin>>sa;
-        cin>>sb;
-        a.clear();
-        b.clear();
-        bool f=true;
-        p=-1;
-        q=-1;
-        repn(i,n)
+        cin>>x>>y>>z;
+        if(x==y && y==z)
         {
-            if(sa[i]=='a'&&p!=-2)p=i;
-            if(sa[i]=='b'&&q!=-2)q=i;
-
-            if(sb[i]=='a')
-            {
-                a.insert(i);
-                if(sa[i]=='a') p=-2;
-            }
-            else 
-            {
-                if(sa[i]<sb[i])
-                {
-                    f=false;
-                    break;
-                }
-                b.insert(i);
-                if(sa[i]=='b')q=-2;
-            }
-        }
-        if(!f)
+            cout<<"YES\n";
+            cout<<x<<" "<<x<<" "<<x<<endl;
+        }else if (x==y)
         {
-            cout<<"-1\n";
-        }else
+            if(x>z)
+            {
+                cout<<"YES\n";
+                cout<<x<<" "<<z<<" "<<z<<endl;
+            }else cout<<"NO\n";
+        }else if(y==z)
         {
-            if(a.empty() && (p!=-1 || q==-1))
+            if(y>x)
             {
-                cout<<"-1\n";
-            }else if(b.empty() && p==-1)
+                cout<<"YES\n";
+                cout<<x<<" "<<x<<" "<<y<<endl;
+            }else cout<<"NO\n";
+        }else if (x==z)
+        {
+            if(x>y)
             {
-                cout<<"-1\n";
-            }else
-            {
-                if(a.empty() || b.empty())
-                {
-                    cout<<"1\n";
-                    repn(i,n)
-                    {
-                        cout<<i<<" ";
-                    }
-                    cout<<endl;
-                }else
-                {
-
-                    if(p!=-2)a.insert(p);
-                    if(q!=-2)b.insert(q);
-                    cout<<"2\n";
-                    cout<<b.size()<<" ";
-                    for(int i:b)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    cout<<a.size()<<" ";
-                    for(int i:a)
-                    {
-                        cout<<i<<" ";
-                    }cout<<endl;
-                    /* code */
-                }
-                
-            }
-            
-        }
-        
-
-        
+                cout<<"YES\n";
+                cout<<x<<" "<<y<<" "<<y<<endl;
+            }else cout<<"NO\n";
+        }else cout<<"NO\n";    
     }
     
  	return 0;

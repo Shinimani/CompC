@@ -52,6 +52,37 @@ static auto speedup = []() {
     return nullptr;
 }();
 
+    int minReorder(int n, vector<vector<int>>& connections) {
+        vector<int> a[n];
+        bool vis[n];
+        memset(vis,false,sizeof(vis));
+        unordered_map<pair<int,int>,bool> m;
+        for(auto v:connections)
+        {
+            a[v[0]].push_back(v[1]);
+            a[v[1]].push_back(v[0]);
+            m[mp(v[0],v[1])]=true;
+            m[mp(v[1],v[0])]=false;
+        }
+        int ans=0;
+        queue<int> q;
+        q.push(0);
+        int k;
+        while(!q.empty())
+        {
+            k=q.front();
+            vis[k]=true;
+            q.pop();
+            for(int i:a[k])
+            {
+                if(vis[i])continue;
+                q.push(i);
+                if(m[mp(k,i)])ans++;
+            }
+        }
+        return ans;
+    }
+
 class Trie {
 
 public:
