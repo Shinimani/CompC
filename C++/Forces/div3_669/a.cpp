@@ -84,9 +84,13 @@ int main()
     
     while(t--)
     {
-        cin>>n;
+        cin>>a>>b;
+        a = abs(b-a);
+        int k = a/10;
+        if(a - 10*k > 0)k++;
+        cout<<k<<endl;
     
-        cout<<ans<<"\n";
+        // cout<<ans<<"\n";
         
     }
     

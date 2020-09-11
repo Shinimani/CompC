@@ -84,9 +84,31 @@ int main()
     
     while(t--)
     {
-        cin>>n;
+        cin>>n>>x>>y;
+        int d = y-x;
+        int i;
+        for(i=n-1;i>0;i--)
+        {
+            if(d%i == 0)
+                break;
+        }
+        int k = d/i;
+        int m = n-i-1;
+        int first;
+        if(x - m*k>0)first = x-m*k;
+        else
+        {
+            first = x%k;
+            if(first==0)first=k;
+        }
+        for(int j=0;j<n;j++)
+        {
+            cout<<first + j*k<<" ";
+        }
+        cout<<endl;
+        
     
-        cout<<ans<<"\n";
+        // cout<<ans<<"\n";
         
     }
     

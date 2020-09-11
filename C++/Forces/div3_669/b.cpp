@@ -67,26 +67,38 @@ int main()
 {
     io
 
-    int t,n;
-    int a,b,c;
-    int temp,ans;
-    int p,q;
-    int x,y,z;
+    // int t,n;
+    // int a,b,c;
+    // int temp,ans;
+    // int p,q;
+    // int x,y,z;
     
-    // ll t,n;
-    // ll a,b,c;
-    // ll temp,ans;
-    // ll p,q;
-    // ll x,y,z;
+    ll t,n;
+    ll a,b,c;
+    ll temp,ans;
+    ll p,q;
+    ll x,y,z;
     
     string s;
     cin>>t;
     
     while(t--)
     {
-        cin>>n;
+        cin>>a>>b>>x>>y>>n;
+        ll dela = min(n,a-x);
+        ll delb = min(n,b-y);
+        // if(dela + delb <=n) cout<<x*y<<endl;
+        // else
+        // {
+            ll a1 = (a - dela)*(b - min(delb,n-dela));
+            ll b1 = (b-delb)*(a-min(dela,n-delb));
+            cout<<min(a1,b1)<<endl;
+            
+        // }
+        
+
     
-        cout<<ans<<"\n";
+        // cout<<ans<<"\n";
         
     }
     

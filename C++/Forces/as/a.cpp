@@ -68,7 +68,7 @@ int main()
     io
 
     int t,n;
-    int a,b,c;
+    // int a,b,c;
     int temp,ans;
     int p,q;
     int x,y,z;
@@ -85,8 +85,23 @@ int main()
     while(t--)
     {
         cin>>n;
+        vi a;
+        repn(i,n)
+        {
+            cin>>temp;
+            a.pb(temp);
+        }
+        sort(a.begin(),a.end());
+        int c=0;
+        repn(i,n-1)
+        {
+            if(abs(a[i]-a[i+1])<=1)
+                c++;
+        }
+        if(c==n-1)
+            cout<<"YES\n";else cout<<"NO\n";
     
-        cout<<ans<<"\n";
+        // cout<<ans<<"\n";
         
     }
     

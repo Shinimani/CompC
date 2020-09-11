@@ -68,17 +68,17 @@ int main()
     io
 
     int t,n;
-    int a,b,c;
+    // int a,b,c;
     int temp,ans;
     int p,q;
     int x,y,z;
-    
+    vi a;
     // ll t,n;
     // ll a,b,c;
     // ll temp,ans;
     // ll p,q;
     // ll x,y,z;
-    
+    // vl a;
     string s;
     cin>>t;
     
@@ -92,4 +92,5 @@ int main()
     
  	return 0;
 }
+ 
  

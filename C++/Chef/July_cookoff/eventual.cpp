@@ -68,26 +68,37 @@ int main()
     io
 
     int t,n;
-    int a,b,c;
-    int temp,ans;
-    int p,q;
-    int x,y,z;
+    // int a,b,c;
+    // int temp,ans;
+    // int p,q;
+    // int x,y,z;
     
     // ll t,n;
     // ll a,b,c;
     // ll temp,ans;
     // ll p,q;
     // ll x,y,z;
-    
+    int a[26];
     string s;
     cin>>t;
     
     while(t--)
     {
         cin>>n;
+        cin>>s;
+        memset(a,0,sizeof(a));
+        for(char c:s)
+        {
+            a[c-'a']++;
+        }
+        bool f=true;
+        for(int i=0;i<26 && f;i++)
+        {
+            f=(a[i]%2==0);
+        }
+        if(f)cout<<"YES\n";
+        else cout<<"NO\n";
     
-        cout<<ans<<"\n";
-        
     }
     
  	return 0;

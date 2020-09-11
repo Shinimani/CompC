@@ -62,6 +62,38 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
+void rotate(vector<vector<int> > &a) {
+    int n = a.size();
+    for(int i=0;i<=n/2;i++)
+    {
+        for(int j=0;j<n-i-1;j++)
+        {
+            int topleft = a[i][i+j];
+            int topright = a[i+j][n-1-i];
+            int bottomright = a[n-1-i][n-1-i-j];
+            int bottomleft = a[n-1-i-j][i];
+            a[i][i+j] = bottomleft;
+            a[i+j][n-1-i] = topleft;
+            a[n-1-i][n-1-i-j] = topright;
+            a[n-1-i-j][i] = bottomright;
+        }
+    }
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+}
+vector<int> nextPermutation(vector<int> &a) {
+    int n=a.size();
+    n--;
+    int max = 0;
+    while(n>=0)
+    {
+        
+    }
+    return a;
+}
+
 
 int main()
 {

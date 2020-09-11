@@ -62,29 +62,52 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
-
+ll helper(ll a)
+{
+    ll ans = 0;
+    ll b=10;
+    while(a>0)
+    {
+        ans+=a%10;
+        a/=10;
+        // b*=10;
+    }
+    return ans;
+}
 int main()
 {
     io
 
-    int t,n;
-    int a,b,c;
-    int temp,ans;
-    int p,q;
-    int x,y,z;
+    // int t,n;
+    // int a,b,c;
+    // int temp,ans;
+    // int p,q;
+    // int x,y,z;
     
-    // ll t,n;
-    // ll a,b,c;
-    // ll temp,ans;
-    // ll p,q;
-    // ll x,y,z;
+    ll t,n;
+    ll a,b,c;
+    ll temp,ans;
+    ll p,q,s;
+    ll x,y,z;
     
-    string s;
+    // string s;
     cin>>t;
     
     while(t--)
     {
-        cin>>n;
+        cin>>n>>s;
+        a=10;
+        ans=0;
+        while(helper(n)>s)
+        {
+            b = n%a;
+            b = a-b;
+            n+=b;
+            ans+=b;
+            a*=10;
+        }
+
+
     
         cout<<ans<<"\n";
         

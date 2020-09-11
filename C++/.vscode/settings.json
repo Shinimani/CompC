@@ -69,7 +69,9 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "xhash": "cpp",
+        "xutility": "cpp"
     },
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true

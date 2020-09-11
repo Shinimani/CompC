@@ -62,29 +62,50 @@ int gcd(int u,int v)
 //     for(int i=2; i<=n; i++)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
-
+bool sortbysec(const pair<int, int>& a, 
+               const pair<int, int>& b) 
+{ 
+    return (a.second < b.second); 
+}
+bool contain(pi a,pi b)
+{
+    return (a.F>=b.F && a.S<=b.S);
+}
 int main()
 {
     io
 
     int t,n;
-    int a,b,c;
+    // int a,b,c;
     int temp,ans;
     int p,q;
     int x,y,z;
-    
-    // ll t,n;
-    // ll a,b,c;
-    // ll temp,ans;
-    // ll p,q;
-    // ll x,y,z;
-    
+    vector<pi> a;
     string s;
     cin>>t;
     
     while(t--)
     {
         cin>>n;
+        a.clear();
+        repn(i,n)
+        {
+            cin>>p>>q;
+            a.pb(mp(p,q));
+        }
+        sort(all(a),sortbysec);
+        pi prev = a[0];
+        ans=1;
+        pi curr;
+        for(int i=1;i<n;i++)
+        {
+            if(a[i].F>prev.S || contain(prev,a[i]))
+            {
+                ans++;
+                prev=a[i];
+            }else if (contain(a[i],prev))
+                ans++;
+        }
     
         cout<<ans<<"\n";
         
@@ -92,4 +113,5 @@ int main()
     
  	return 0;
 }
+ 
  

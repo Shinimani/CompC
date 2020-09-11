@@ -67,27 +67,51 @@ int main()
 {
     io
 
-    int t,n;
-    int a,b,c;
-    int temp,ans;
-    int p,q;
-    int x,y,z;
+    // int t,n;
+    // // int a,b,c;
+    // int temp,ans;
+    // int p,q;
+    // int x,y,z;
     
-    // ll t,n;
+    ll t,n;
     // ll a,b,c;
-    // ll temp,ans;
-    // ll p,q;
-    // ll x,y,z;
+    ll temp,ans;
+    ll p,q;
+    ll x,y,z;
     
     string s;
     cin>>t;
+    vl a;
+    vl b;
     
     while(t--)
     {
         cin>>n;
-    
+        a.clear();
+        b.clear();
+        ll amin = INT_MAX;
+        ll bmin = INT_MAX;
+        repn(i,n)
+        {
+            cin>>temp;
+            a.pb(temp);
+            amin=min(amin,temp);
+        }
+        repn(i,n)
+        {
+            cin>>temp;
+            b.pb(temp);
+            bmin=min(bmin,temp);
+        }
+        ll ad=0,bd=0;
+        ans=0;
+        repn(i,n)
+        {
+            ad = a[i]-amin;
+            bd = b[i]-bmin;
+            ans+=max(ad,bd);
+        }
         cout<<ans<<"\n";
-        
     }
     
  	return 0;

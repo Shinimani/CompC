@@ -63,6 +63,48 @@ int gcd(int u,int v)
 //         if(str[i]==0)primes[cnt]=i,cnt++;
 // }
 
+int helper(vector<int> &a, int i,int j,int x,int y,int z)
+{
+    int ans=0;
+    int n = a.size();
+    if(i>j)return 0;
+    if(x+y+z == 0)return 0;
+    int sizee = j-i+1;
+    if(sizee<2 && x==0)return 0;
+    if(sizee<3 && x+y==0)return 0;
+    if(sizee==1)return a[i];
+    // if(sizee==2)
+    // {
+    //     if(y>0)return a[i]+a[j];
+    //     if(x==1)
+    // }
+    if(x+2*y+3*z >= j-i+1)
+    {
+        for(int k=i;k<=j;k++)
+        {
+            ans+=a[k];
+        }
+        return ans;
+    }
+    int a1 = max(helper(a,i+1,j,x,y,z),helper(a,i,j-1,x,y,z);
+    int a2 = (x>0)? max(helper(a,i+1,j,x-1,y,z) + a[i],helper(a,i,j-1,x-1,y,z) + a[j]) : 0;
+    int a3 = (y>0 && i +1 < a.size()? max(helper(a,i+2,j,x,y-1,z) + a[i] + a[i+1],helper(a,i+2,j,x,y-1,z) + a[i] + a[i+1]:0;
+    int a4 = (z>0 && i +2 < a.size())? helper(a,i+3,j,x,y,z-1) + a[i] + a[i+1] + a[i+2]:0;
+    
+    ans = max(a1,max(a2,max(a3,a4)));
+    return ans;
+}
+int calculateProfit(vector<int> a,int x,int y,int z)
+{
+    int n = a.size();
+    return helper(a,0,n-1,x,y,z);
+
+}
+
+// int maximumNetworks(vector<int> speed,int mincomps,long thres)
+// {
+
+// }
 int main()
 {
     io
@@ -84,9 +126,13 @@ int main()
     
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
+        vector<int> a;
+        a.pb(-6);
+        a.pb(5);
+        a.pb(10);
+        a.pb(-2);
+
+        cout<<calculateProfit(a,1,1,0)<<endl;
         
     }
     

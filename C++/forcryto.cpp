@@ -73,22 +73,53 @@ int main()
     int p,q;
     int x,y,z;
     
+    vi v;
+    v.pb(0);
+    v.pb(0);
+    v.pb(0);
+
+    v[1]=2;
+    v[2]=1;
+    for(int i=2;i<=100;i++)
+    {
+        cout<<i<<" ";
+        a = v[0];
+        b = v[1];
+        c = v[2];
+        v[0] = c-b;
+        v[1] = b-a+c;
+        v[2] = a+c-b;
+        for(int j=0;j<3;j++)
+        {
+            v[j] = (v[j] + 3)%3;
+        }
+        cout<<v[0]<<" "<<v[1]<<" "<<v[2]<<endl;
+        if(v[0]==0 && v[1]==1 && v[2]==0)
+        {
+            cout<<"FOUND\n";
+            break;
+        }
+    }
+    cout<<endl<<"END"<<endl;
+
+
+
     // ll t,n;
     // ll a,b,c;
     // ll temp,ans;
     // ll p,q;
     // ll x,y,z;
     
-    string s;
-    cin>>t;
+    // string s;
+    // cin>>t;
     
-    while(t--)
-    {
-        cin>>n;
+    // while(t--)
+    // {
+    //     cin>>n;
     
-        cout<<ans<<"\n";
+    //     cout<<ans<<"\n";
         
-    }
+    // }
     
  	return 0;
 }

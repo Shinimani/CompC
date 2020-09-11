@@ -67,27 +67,32 @@ int main()
 {
     io
 
-    int t,n;
-    int a,b,c;
+    int t,n,k;
+    // int a,b,c;
     int temp,ans;
-    int p,q;
-    int x,y,z;
+    // int p,q;
+    // int x,y,z;
     
     // ll t,n;
     // ll a,b,c;
     // ll temp,ans;
     // ll p,q;
     // ll x,y,z;
-    
+    int a[26];
     string s;
     cin>>t;
     
     while(t--)
     {
-        cin>>n;
-    
-        cout<<ans<<"\n";
-        
+        cin>>n>>k;
+        repn(i,n)
+        {
+            cin>>temp;
+            if(temp%k)
+                cout<<"0";
+            else cout<<"1";
+        }
+        cout<<endl;
     }
     
  	return 0;

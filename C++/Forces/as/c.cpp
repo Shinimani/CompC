@@ -67,29 +67,64 @@ int main()
 {
     io
 
-    int t,n;
-    int a,b,c;
+    int t,n,k;
+    // int a,b,c;
     int temp,ans;
     int p,q;
     int x,y,z;
-    
+    vi a;
     // ll t,n;
     // ll a,b,c;
     // ll temp,ans;
     // ll p,q;
     // ll x,y,z;
-    
+    // vl a;
     string s;
     cin>>t;
     
     while(t--)
     {
         cin>>n;
+        a.clear();
+        repn(i,n)
+        {
+            cin>>temp;
+            a.pb(temp);
+        }
+        sort(all(a));
+        if(n==1) cout<<"0\n";
+        else if(n<=3)cout<<"1\n";
+        else
+        {
+            p = a[0]+a[1];
+            q = a[n-1]+a[n-2];
+            ans=0;
+            for(int i=p;i<=q;i++)
+            {
+                temp=0;
+                auto aa = a;
+                auto it = aa.begin();
+                while(it!=aa.end())
+                {
+                    k = i - *it;
+                    auto helper = it;
+                    helper++;
+                    auto loc = find(helper,aa.end(),k);
+                    if (loc!=aa.end())
+                    {
+                        aa.erase(loc);
+                        aa.erase(it);
+                        temp++;
+                    }else it++;
+                }
+                ans=max(ans,temp);
+          }
+            cout<<ans<<"\n";
+        }
+        
     
-        cout<<ans<<"\n";
         
     }
     
  	return 0;
 }
- 
